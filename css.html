@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html_css.css">
+<body>
+    
+    <div id="left">
+     
+    </div>
+    <!--Thân
+    -	Tổng quan về CSS
+-	Cú pháp và cách tạo các CSS, các loại bộ chọn
+-	Giới thiệu một số kỹ thuật định dạng, điều khiển hiển thị sử dụng CSS
+-	Ví dụ minh hoạ CSS
+-	Giới thiệu Bootstrap
+-	Cách sử dụng Bootstrap, lấy ví dụ minh hoạ
+-->
+    <div id="mid">
+        <div>
+            <div id="head">
+                <h1 class="css-hd" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 50px;">CSS</h1>
+            </div>
+            <div id="dh">
+                <ul>
+                    <li><a style="background-color: #41737a;" href="css.html">GIỚI THIỆU</a></li>
+                    <li><a href="css_the.html">VÍ DỤ</a></li>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+
+                    
+                    <li style="float: right;"><a href="js.html">JavaScript</a></li>
+                    <li style="float: right;"><a href="html.html">HTML</a></li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+        <div style="padding: 15px;">
+            <div>
+                <h2>1.Giới thiệu về CSS</h2>
+                <h2>CSS là gì?</h2>
+
+                <div style="width: 100%; display:flex;">
+                    <div style="margin: auto; width: 45% ; text-align:center;" >
+                            <img style="width: 100%;" src="https://webhoian.com/wp-content/uploads/2019/10/css-la-gi.jpg" alt="ảnh minh họa">
+                            <p style="font-size:15px;font-style: italic;">CSS là ngôn ngữ chúng tôi sử dụng để tạo kiểu cho một trang Web.</p>
+                    </div>
+                </div>
+                
+                <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                    <p>CSS là chữ viết tắt của Cascading Style Sheets, nó là một ngôn ngữ được sử dụng để tìm và định dạng lại các phần tử được tạo ra bởi các đánh dấu ngôn ngữ ( HTML ). Nói ngắn gọn hơn là ngôn ngữ tạo phong cách cho trang web. Bạn có thể hiểu đơn giản rằng, nếu HTML đóng vai trò định dạng các phần tử trên trang web như việc tạo ra các văn bản đoạn, các tiêu đề, bảng,… thì CSS sẽ giúp chúng ta có thể thêm phong cách vào các phần tử 
+                        HTML đó như thay đổi bố cục, màu sắc trang, thay đổi chữ màu, chữ phông chữ, thay đổi cấu trúc…</p>
+                </div>
+                <br>
+                <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                    <p>CSS được phát triển bởi  W3C  ( World Wide Web Consortium ) vào năm 1996, vì HTML không được thiết kế để gắn thẻ để giúp định dạng trang web.</p>
+                </div>
+                <br>
+                <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                    <p>Phương thức hoạt động của CSS là nó sẽ tìm dựa vào các vùng chọn, vùng chọn có thể là tên một thẻ HTML, tên một ID, class hay nhiều kiểu khác. Sau đó là nó sẽ áp dụng các thuộc tính cần thay đổi lên vùng chọn đó.</p>
+                </div>
+                
+                
+                                    
+                
+            </div>
+            <h2>2.Bố cục và cấu trúc một đoạn CSS</h2>
+            <p>>2.1.Bố cục của một đoạn CSS</p>
+                <p>Bố cục CSS thường chủ yếu dựa vào hình hộp và mỗi hộp đều chiếm những khoảng trống trên trang của bạn với các thuộc tính như:</p> 
+                <p><b>Padding:</b>Gồm không gian xung quanh nội dung (ví dụ: xung quanh đoạn văn bản).</p>
+                <p><b>Border:</b>Là đường liền nằm ngay bên ngoài phần đệm.</p>
+                <p><b>Margin:</b> Là khoảng cách xung quanh bên ngoài của phần tử.</p>
+            <p>2.2.Cấu trúc của một đoạn CSS</p>
+            <p>Một đoạn CSS bao gồm các phần như thế này:</p> 
+            <p>vùng chọn { thuộc tính : giá trị; thuộc tính: giá trị;    ..... }</p> 
+            <p>Nghĩa là nó sẽ được khai báo bằng vùng chọn, sau đó các thuộc tính và giá trị sẽ nằm bên trong cặp dấu ngoặc nhọn {}. Mỗi thuộc tính sẽ luôn có một giá trị riêng, giá trị có thể là dạng số, hoặc các tên giá trị trong danh sách có sẵn của CSS. Phần giá trị và thuộc tính phải được cách nhau bằng dấu hai chấm, và mỗi một dòng khai báo thuộc tính sẽ luôn có dấu chấm phẩy ở cuối.
+                 Một vùng chọn có thể sử dụng không giới hạn thuộc tính.</p>
+            
+
+            <p>Định nghĩa của các phần này như sau: </p> 
+               <p>Bộ chọn (Selector): là mẫu để chọn phần tử HTML mà bạn muốn định nghĩa phong cách. Các selector được áp dụng cho các trường hợp sau:</p>
+                <p>Tất cả phần tử theo một dạng cụ thể nào đó, ví dụ phần tử tiêu đề h1.</p>
+            
+                <p>Thuộc tính id và class của các phần tử. <br>
+                    Các phần tử dựa vào mối liên quan với các phần tử khác trong cây phân cấp tài liệu. <br>
+                    Khai báo (Declaration): Khối khai báo chứa một hoặc nhiều khai báo, phân tách với nhau bằng các dấu chấm phẩy. Mỗi khai báo gồm tên và giá trị đặc tính CSS, phân tách bằng dấu phẩy. Khai báo CSS luôn kết thúc bằng dấu chấm phẩy, khối khai báo nằm trong các dấu ngoặc móc. Trong ví dụ dưới đây, các phần tử &lt;p&gt; sẽ được căn giữa, chữ màu đỏ.
+                    p {   color: red;   text-align: center; } <br>
+                    Thuộc tính (Properties): Những cách mà bạn có thể tạo kiểu cho một phần tử HTML. (Với trường hợp này thì color được xem là một trong những  thuộc tính của phần tử p). Chính vì vậy, với CSS thì bạn chỉ cần lựa chọn thuộc tính mà chính bạn muốn tác động nhất trong bộ quy tắc của mình. <br>
+                    Giá trị thuộc tính: Ở bên phải của thuộc tính sau dấu hai chấm(:), chúng ta sẽ sở hữu giá trị thuộc tính mà việc lựa chọn trong số đó sẽ xuất hiện nhiều lần để có thể cho một thuộc tính cụ thể nào đó. <br>
+                    Về danh sách các thuộc tính của CSS bạn có thể xem qua CSS Reference của Mozilla.
+                </p>
+
+            <h2>3. Tại sao phải sử dụng CSS</h2>
+            <p>3.1. Giải quyết một vấn đề lớn</p> 
+            <p>Trước khi có CSS, các thẻ như phông chữ, màu sắc, kiểu nền, các sắp xếp phần tử, đường viền và kích thước phải được lặp lại trên mọi trang web. Đây là một quá trình rất dài tốn thời gian và công sức. Ví dụ: Nếu bạn đang phát triển một trang web lớn nơi phông chữ và thông tin màu được thêm vào mỗi trang, nó sẽ trở thành một quá trình dài và tốn kém. CSS đã được tạo ra để giải quyết vấn đề này. Đó là một khuyến cáo của W3C.
+                Nhờ CSS mà source code của trang Web sẽ được tổ chức gọn gàng hơn, trật tự hơn. Nội dung trang web sẽ được tách bạch hơn trong việc định dạng hiển thị. Từ đó, quá trình cập nhập nội dung sẽ dễ dàng hơn và có thể hạn chế tối thiểu làm rối cho mã HTML.</p>
+            
+
+            <p>3.2. Tiết kiệm rất nhiều thời gian</p> 
+            <p>Định nghĩa kiểu CSS được lưu trong các tệp CSS bên ngoài vì vậy có thể thay đổi toàn bộ trang web bằng cách thay đổi chỉ một tệp. Sử dụng CSS sẽ giúp bạn không cần thực hiện lặp lại các mô tả cho từng thành phần. Từ đó, bạn có thể tiết kiệm được tối đa thời gian làm việc với nó, làm code ngắn lại giúp kiểm soát dễ dàng hơn các lỗi không đáng có.
+            CSS tạo ra nhiều style khác nhau nên có thể được áp dụng với nhiều trang web, từ đó giảm tránh việc lặp lại các định dạng của các trang web giống nhau.</p>
+            
+
+            
+           <p>3.3. Cung cấp thêm các thuộc tính</p> 
+           <p>CSS cung cấp các thuộc tính chi tiết hơn HTML để định nghĩa giao diện của trang web. CSS giúp người dùng nhiều styles trên một trang web HTML nên khả năng điều chỉnh trang của bạn trở nên vô hạn.</p>
+            
+            <h2>4. Cách nhúng css vào website</h2>
+                <p>Để CSS có thể thực thi trên website hoặc HTML Documents thì phải tiến hành nhúng CSS vào website. Nếu không, các định dạng CSS sẽ không thực thi trên HTML. <br> Có 3 cách nhúng CSS vào website:
+                    <br> Inline CSS - Nhúng trực tiếp vào tài liệu HTML thông qua cặp thẻ &lt;style&gt; &lt;/style&gt;. <br>
+                    Internal CSS - dùng thẻ &lt;style&gt; bên trong thẻ &lt;head&gt; của HTML để tạo ra nơi viết mã CSS. <br>
+                    External CSS - Tạo một tập tin .css riêng và nhúng vào tài liệu HTML thông qua cặp thẻ &lt;link&gt;. <br>
+                </p>
+
+            <p>Bạn có thể xem thêm tại: <a href="https://topdev.vn/blog/css-la-gi/">LINK</a></p>
+            
+            
+
+            <div id="content" style=" text-align:center ;padding: 20px; background: grey;">
+                Phần nội dung được trích từ <a href="https://topdev.vn/blog/css-la-gi/" title="học lập trình">https://topdev.vn</a>
+            </div>
+            <br/>
+
+            <input style="background-color: rgb(126, 133, 131);" type="button" id="btn1" value="Ẩn"/>
+            <input style="background-color: rgb(126, 133, 131);" type="button" id="btn2" value="Hiển Thị"/>
+        </div>
+    </div>
+
+
+    <script language="javascript">
+
+        document.getElementById("btn1").onclick = function () {
+            document.getElementById("content").style.display = 'none';
+        };
+
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("content").style.display = 'block';
+        };
+
+    </script>
+    
+
+
+</body>
+</html>

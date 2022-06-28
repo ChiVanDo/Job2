@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html_css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        h2{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: bold;
+            
+        }
+        #head{
+            padding: 50px;
+        }
+    </style>
+    
+<body>
+    
+    <div id="left">
+     
+    </div>
+    <!--Thân-->
+    <div id="mid">
+        <div>
+            <div id="head">
+                <h1 class="css-hd" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 50px;">CSS</h1>
+            </div>
+            <div id="dh">
+                <ul>
+                    <li><a href="css.html">GIỚI THIỆU</a></li>
+                    <li><a style="background-color: #41737a;" href="css_the.html">VÍ DỤ</a></li>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+
+                    
+                    <li style="float: right;"><a href="js.html">JavaScript</a></li>
+                    <li style="float: right;"><a href="html.html">HTML</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Điều hướng-->
+        <div style="float: left;">
+            <input style="background-color: yellow; padding:3px;" type="button" id="btn2" value="Cú pháp"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn3" value="Các loại bộ chọn"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn4" value="Kỹ thuật định dạng"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn5" value="Điều khiển hiển thị"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn6" value="Bootstrap"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn7" value="VD Bootstrap"/>
+        </div>
+        <!--Nội dung-->
+        <div id="type_cp" style="padding: 15px; display:block;">
+            <h2>Cú pháp tạo CSS</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p style="font-weight: bold ;">1. Tạo trực tiếp lên các thẻ HTML</p>
+                    <p>Cách này có đặc điểm chỉ ảnh hưởng tới thẻ mà ta tác động css lên.</p>
+                    <p> <b>VÍ DỤ:</b> &lt;p style="color=red" &gt; Nội dung hiển thị lên web &lt;/p&gt;</p> 
+                    <p style="font-style: italic;">&lt;!--Ví dụ trên ta tác động trực tiếp vào thẻ p qua thuộc tính style--&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <p style="color: red;">Nội dung hiển thị lên web</p>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-weight: bold ;">2. Tạo bằng thẻ &lt;style&gt;&lt;/style&gt;.</p>
+                    <p>Cách này ta sẽ tạo thẻ &lt;style&gt;&lt;/style&gt; vào phần head.</p>
+                    <p>Đặc điểm của cách này sẽ tác động toàn bộ lên các bộ chọn mà ta chỉ định.</p>
+                    <p><b>VÍ DỤ:</b> <br> 
+                        &lt;head&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;style&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        p{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            color: blueviolet; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    #myid{ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;        color: brown; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt; <br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 1&lt;/p&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="myid"&gt;Mầu chữ 2&lt;/p&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt; 
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ trên sẽ tác động tới những thẻ p và những thẻ có id là myid--&gt;</p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p style="color: rebeccapurple;">Mầu chữ 1</p>
+                        <p style="color: brown;">Mầu chữ 2</p>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-weight: bold ;">3.Tạo thẻ bằng cách link 1 file css từ bên ngoài.</p>
+                    <p>Đặc điểm của cách này cũng giống cách thêm thẻ style vào head của file html</p>
+                    <p>Để thực hiện cách này đầu tiên bạn phải có 1 file css.</p>
+                    <p>Hãy tạo file bằng cách lưu file với đuôi nameFile.css &lt;cụ thể cách này mình sẽ nói ở mục "Các loại bộ chọn"&gt; </p>
+                    <p>Sau khi có file css bạn hãy sử dụng thẻ &lt;link>&gt;</p>  
+                    <p>Cấu trúc của thẻ &lt;link>&gt;: <br>
+                        &lt;link rel="stylesheet" href="link dẫn tới file css của bạn"&gt;
+                    </p>
+                    <p> <b>VÍ DỤ:</b> Bạn có 1 file css có tên mycss.css có nội dung <br>
+                        p{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp  color: green; <br>  
+                        } <br>
+                        #myid{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp   color: yellow; <br>
+                        } <br>
+
+                        <p style="font-style: italic;">&lt;!--Ở FILE html của bạn--&gt;</p> 
+                        <p>
+                        &lt;head&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp    &lt;link rel="stylesheet" href="mycss.css"&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp    &lt;p&gt; Hello html&lt;/p&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp   &lt;h2 id="myid"&gt; Hello html&lt;/h2&gt; <br>
+                        &lt;/body&gt;<br>
+                        </p>
+                    </p> 
+
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p style="color: green;">Hello html</p>
+                        <h2 style="color: yellow ;">Hello html</h2>
+                    </div>
+                </div>
+
+                <p></p>
+            </div>   
+        </div>
+
+        <div id="type_bc" style="padding: 15px; display:none;">
+            <h2>Các loại bộ chọn</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                        <p>Bộ chọn CSS chọn (các) phần tử HTML bạn muốn tạo kiểu.</p>
+                        <p>Bộ chọn CSS được sử dụng để "tìm" (hoặc chọn) các phần tử HTML mà bạn muốn tạo kiểu. <br>
+                    </div>
+                    <br>
+                    <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                       <p>Chúng ta có thể chia các bộ chọn CSS thành năm loại: <br><br>
+                        
+                        Bộ chọn đơn giản (chọn các phần tử dựa trên tên, id, lớp) <br>
+                        Bộ chọn bộ kết hợp (chọn các phần tử dựa trên mối quan hệ cụ thể giữa chúng) <br>
+                        Bộ chọn lớp giả (chọn phần tử dựa trên một trạng thái nhất định) <br>
+                        Bộ chọn phần tử giả (chọn và tạo kiểu cho một phần của phần tử) <br>
+                        Bộ chọn thuộc tính (chọn các phần tử dựa trên một thuộc tính hoặc giá trị thuộc tính) <br></p> 
+                    </div>
+
+                    <p>Ở đây tôi sẽ giải thích các bộ chọn cơ bản nhất</p>
+
+                    <!--Số 1-->
+                    <p><b>1.Bộ chọn phần tử</b> </p>
+                    <p>Bộ chọn phần tử chọn các phần tử HTML dựa trên tên phần tử.</p>
+                    
+                    <p> <b>VÍ DỤ:</b> <br>
+                        &lt;head&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;style&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        p{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            color: red; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           font-weight: bold; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt; <br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 1&lt;/p&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 2&lt;/p&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt; 
+
+
+                        <p style="font-style: italic;">&lt;!- Tại ví dụ này các phần tử p sẽ được thay đổi mầu thành đỏ và chữ font chữ in đậm. --&gt;.<br>
+                    </p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <p style="color: red; font-weight:bold">Mầu chữ 1</>
+                        <p style="color: red; font-weight:bold">Mầu chữ 2</p>
+                    </div>
+                </div>
+                <div>
+                    <p> <b> 2.Bộ chọn id CSS</b></p>
+                    <p>Bộ chọn id sử dụng thuộc tính id của một phần tử HTML để chọn một phần tử cụ thể. <br>
+
+                        Id của một phần tử là duy nhất trong một trang, do đó, bộ chọn id được sử dụng để chọn một phần tử duy nhất! <br>
+                        
+                        Để chọn một phần tử có id cụ thể, hãy viết một ký tự băm (#), sau đó là id của phần tử.</p>
+                    <p> <b>VÍ DỤ:</b><br>
+                        &lt;head&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;style&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        #myid{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            background-color: red; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           color: green; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt; <br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="myid"&gt;Mầu chữ 1&lt;/p&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 2&lt;/p&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                    </p>
+               
+                    <p style="font-style: italic;">&lt;!- Tại ví dụ này phần tử có id="myid" sẽ được tác động đến. --&gt;.<br>
+                        <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <p style="background-color: red; color: green">Mầu chữ 1</p>
+                        <p>Mầu chữ 2</p>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>3. Bộ chọn lớp (class)</b> </p>
+                    <p>Bộ chọn lớp chọn các phần tử HTML với một thuộc tính lớp cụ thể. <br>
+
+                        Để chọn các phần tử với một lớp cụ thể, hãy viết một ký tự dấu chấm (.), Theo sau là tên lớp.</p>
+
+                        <p> <b>VÍ DỤ:</b><br>
+                            &lt;head&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    &lt;style&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        .myid{ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            background-color: green; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            color: red; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            text-align: center; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            width: 150px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            height: 50px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt; <br>
+                                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="myid"&gt;Mầu chữ 1&lt;/div&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 2&lt;/p&gt; <br>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                        </p>
+                        <p style="font-style: italic;">&lt;!- Tại ví dụ này phần tử có class="myid" sẽ được tác động đến. --&gt;.<br>
+                        <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px ;background-color:rgb(255, 251, 251)">
+                        <div style="background-color: green; color: red; text-align:center; width: 150px; height:50px;">
+                            Mầu chữ 1
+                        </div>
+                        <p>Mầu chữ 2</p>
+                    </div>
+                    <p>Lưu ý: Tên lớp không được bắt đầu bằng một số!</p>
+                </div>
+                <div>
+                    <p> <b>4. Bộ chọn chung CSS</b> </p>
+                    <p>Bộ chọn tông quát (*) chọn tất cả các phần tử HTML trên trang.</p>
+                    <p> <b>VÍ DỤ:</b><br>
+                        &lt;head&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;style&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        *{ <br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            color: red; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            text-align:center; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt; <br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="myid"&gt;Mầu chữ 1&lt;/div&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 2&lt;/p&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!- Tại ví dụ này tất cả phần tử trong file html đều bị tác động tới. --&gt;.<br>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <p style="color: red; text-align:center; ">Mầu chữ 1</p>
+                        <p style="color: red; text-align:center; ">Mầu chữ 2</p>
+                    </div>
+                </div>
+                <div>
+                    <p> <b> 5. Bộ chọn nhóm CSS</b></p>
+                    <p>Bộ chọn nhóm chọn tất cả các phần tử HTML có cùng định nghĩa kiểu. <br>
+
+                        Ta có đoạn mã CSS sau (các phần tử h3, h4 và p có cùng định nghĩa kiểu):</p>
+                        <p>
+                            h3{ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    color: green; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    font-weight: bold; <br>
+                            } <br>
+                            h4{ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    color: green; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    font-weight: bold; <br>
+                            } <br>
+                            p{ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    color: green; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    font-weight: bold; <br>
+                            } <br> 
+                        </p>
+                    <p>Sẽ tốt hơn nếu nhóm các bộ chọn, để giảm thiểu mã. <br>
+
+                        Để nhóm các bộ chọn, hãy phân tách từng bộ chọn bằng dấu phẩy.</p>
+                        
+                    <p> <b>VÍ DỤ:</b><br>
+                        &lt;head&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;style&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        h3,h4,p{ <br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            color: green; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;            font-weight: bold; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt; <br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Mầu chữ 1&lt;/h3&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Mầu chữ 2&lt;/h4&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mầu chữ 3&lt;/p&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!- Tại ví dụ này ta đã gom các nhóm css có cùng kiểu lại với nhau chỉ bằng ngăn cách dấu phẩy. --&gt;.<br>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <h3  style="color: green; font-weight: bold;">Mầu chữ 1</h3>
+                        <h4  style="color: green; font-weight: bold;">Mầu chữ 2</h4>
+                        <p style="color: green; font-weight: bold;">Mầu chữ 3</p>
+                    </div>
+                </div>
+                <br>
+                <div style="width:100% ; background-color: grey; padding:3px; text-align:center;">
+                    <p>Bạn có thể xem thêm các ví dụ tại web: <a href="https://www.w3schools.com/css/css_selectors.asp">w3schools.com</a></p>
+                </div> 
+            </div>  
+        </div>
+
+
+        <div id="type_dd" style="padding: 15px; display:none;">
+            <h2>Kỹ thuật định dạng</h2>
+
+
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                
+                <h2>Các thẻ định dạng</h2>
+                <p>Các phần tử định dạng <b>HTML</b> Các phần tử định dạng được thiết kế để hiển thị các loại văn bản đặc biệt:</p> 
+                <p>Bao gồm các thẻ dưới đây</p>
+                <div>
+                    <div style="width: 80%; background-color: rgb(255, 255, 255); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                       <p>&lt;b&gt; - Chữ in đậm <br>
+                        &lt;strong&gt; - Văn bản quan trọng <br>
+                        &lt;i&gt; - Văn bản in nghiêng <br>
+                        &lt;em&gt; - Đoạn văn bản được nhấn mạnh <br>
+                        &lt;mark&gt; - Văn bản được đánh dấu <br>
+                        &lt;small&gt; - Văn bản nhỏ hơn <br>
+                        &lt;del&gt; - Văn bản đã xóa <br>
+                        &lt;ins&gt; - Đã chèn văn bản <br>
+                        &lt;sub&gt; - Văn bản chỉ số <br>
+                        &lt;sup&gt; - Văn bản siêu cấp <br>
+                        </p> 
+                    </div>
+                </div>
+                <p><b>1. Thẻ &lt;b&gt; và  &lt;strong&gt;</b></p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;b&gt;Nội dung văn bản&lt;/b&gt;</p>
+                    <p>- &lt;strong&gt;Nội dung văn bản&lt;/strong&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <b>Nội dung văn bản</b> <br>
+                        <strong>Nội dung văn bản</strong>
+                    </div>
+                    <p>=> Thẻ &lt;b&gt; và &lt;strong&gt; đều có tắc dụng giống nhau nên bạn có thể sử dụng tùy hoàn cảnh nhé. </p>
+                </div>
+                
+                <p> <b>2. Thẻ &lt;i&gt; và &lt;em&gt;</b>  </p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;i&gt;Nội dung văn bản&lt;/i&gt;</p>
+                    <p>- &lt;em&gt;Nội dung văn bản&lt;/em&gt;</p>
+                    <p>Tác dụng 2 thẻ này có tác dụng in nghiêng văn bản. </p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;i&gt;Văn bản in nghiêng i&lt;/i&gt;<br>
+                        &lt;em&gt;Văn bản in nghiêng em&lt;/em&gt;<br>
+                        &lt;p&gt;Văn bản bình thường&lt;/p&gt;
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <i>Văn bản in nghiêng 'i'</i> <br>
+                        <em>Văn bản in nghiêng 'em'</em>
+                        <p>Văn bản bình thường</p>
+                    </div>
+                    <p>=> Thẻ &lt;i&gt; và &lt;em&gt; đều có tắc dụng giống nhau nên bạn có thể sử dụng tùy hoàn cảnh nhé. </p>
+                </div>
+                <p> <b>3. Thẻ &lt;small&gt;</b> </p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;small&gt;Nội dung văn bản&lt;/small&gt;</p>
+                    <p>Tác dụng làm nhỏ kích cỡ văn bản.</p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;p&gt;Văn bản in bình thường&lt;/p&gt;<br>
+                        &lt;p&gt;&lt;small&gt;Văn bản nhỏ hơn&lt;/small&gt;&lt;/p&gt;<br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p>Văn bản bình thường</p>
+                        <p><small>Văn bản nhỏ hơn</small></p>
+                    </div>
+                </div>
+                <p> <b>4. Thẻ &lt;mark&gt;</b>  </p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;mark&gt;Nội dung văn bản&lt;/mark&gt;</p>
+                    <p>Tác dụng tô vàng 1 đoạn văn bản, có thể dùng để đánh dấu.</p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;p&gt;Văn bản&lt;mark&gt;nhỏ &lt;/mark&gt;hơn&lt;/p&gt;<br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p>Văn bản <mark>nhỏ</mark> hơn</p>
+                    </div>
+                </div>
+                <p> <b>5. Thẻ &lt;del&gt;</b>  </p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;del&gt;Nội dung văn bản&lt;/del&gt;</p>
+                    <p>Tác dụng gạch ngang 1 đoạn văn bản.</p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;p&gt;Văn bản&lt;del&gt;cần gạch ngang &lt;/del&gt;&lt;/p&gt;<br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p>Văn bản <del>cần gạch ngang</del></p>
+                    </div>
+                </div>
+                <p> <b>6. Thẻ &lt;ins&gt;</b>  </p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;ins&gt;Nội dung văn bản&lt;/ins&gt;</p>
+                    <p>Tác dụng gạch ngang dưới chân 1 đoạn văn bản.</p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;p&gt;Văn bản cần&lt;ins&gt; gạch ngang dưới chân &lt;/ins&gt;&lt;/p&gt;<br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p>Văn bản cần<ins> gạch ngang dưới chân</ins></p>
+                    </div>
+                </div>
+                <p> <b>7. Thẻ &lt;sub&gt; và &lt;sup&gt;</b>  </p>
+                <div>
+                    <p>Cấu trúc thẻ:</p>
+                    <p>- &lt;sub&gt;Nội dung văn bản&lt;/sub&gt;</p>
+                    <p>- &lt;sup&gt;Nội dung văn bản&lt;/sup&gt;</p>
+                    <p>Tác dụng đối văn thẻ &lt;sub&gt; để làm chỉ số con với thẻ &lt;sup&gt; làm chỉ số trên</p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;p&gt;log &lt;sub&gt;a&lt;/sub&gt;&lt;sup&gt;b&lt;/sup&gt;&lt;/p&gt; <br>
+                        &lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt;+2x&lt;sup&gt;3&lt;/sup&gt;&lt;/p&gt;
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <p>log <sub>a</sub><sup>b</sup></p>
+                        <p>x<sup>2</sup>+2x<sup>3</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div id="type_dk" style="padding: 15px; display:none;">
+            <h2>Điều khiển hiển thị</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p><b>1. Điều khiển bằng:  padding</b></p>
+
+                    <p>Thuộc tính padding khi sử dụng sẽ thêm khoảng không gian bên trong thành phần, khoảng không gian này sẽ được cộng dồn thêm vào chiều rộng hoặc chiều cao của thành phần (tùy vào hướng sử dụng padding).
+
+                        Thuộc tính padding được chia ra làm 2 dạng: <br></p>
+
+                    <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                        <p><b>Dạng cơ bản gồm 4 thuộc tính:</b>    <br>
+                            padding-top: thêm khoảng không gian bên trong hướng trên thành phần. <br>
+                            padding-right: thêm khoảng không gian bên trong hướng bên phải thành phần. <br>
+                            padding-bottom: thêm khoảng không gian bên trong hướng dưới thành phần. <br>
+                            padding-left: thêm khoảng không gian bên trong hướng bên trái thành phần. <br>
+                        </p> 
+                    </div>
+                    <br>
+                    <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                       <p>
+                        <b>Dạng tổng quát gồm 4 thuộc tính:</b><br>
+                        padding với 4 giá trị. <br>
+                        padding với 3 giá trị. <br>
+                        padding với 2 giá trị. <br>
+                        padding với 1 giá trị. <br>
+                        </p> 
+                    </div> <br>
+
+                    <i>Kết hợp dạng cơ bản và dạng tổng quát: được sử dụng trong trường hợp muốn điều chỉnh lại giá trị của thuộc tính tổng quát.</i>
+
+                    <p> <b>VÍ DỤ:</b> <br>
+                        <p style="font-style: italic;">&lt;!--Đây là một số ví dụ ở dạng cơ bản.--&gt;</p>
+                        &lt;head&gt; <br>
+                        &emsp;    &lt;style&gt; <br>
+                        &emsp;&emsp;        #vd1{ <br>
+                            &emsp;    &emsp;&emsp;    padding-top: 15px; <br>
+                            &emsp;   &emsp;&emsp;    background-color: yellow; <br>
+                            &emsp;   &emsp;&emsp;    border: 1px solid red; <br>
+                            &emsp;&emsp;   } <br>
+                            &emsp;&emsp;    #vd2{ <br>
+                                &emsp;   &emsp;&emsp;        padding-right: 15px; <br>
+                                &emsp;   &emsp;&emsp;    background-color: yellow; <br>
+                                &emsp;   &emsp;&emsp;    border: 1px solid red; <br>
+                                &emsp;&emsp;   } <br>
+                                &emsp;&emsp;    #vd3{ <br>
+                                    &emsp;      &emsp;&emsp;        padding-bottom: 15px; <br>
+                                    &emsp;     &emsp;&emsp;    background-color: yellow; <br>
+                                    &emsp;    &emsp;&emsp;    border: 1px solid red; <br>
+                                    &emsp;&emsp;   } <br>
+                                    &emsp;&emsp;   #vd4{ <br> 
+                                        &emsp;    &emsp;&emsp;       padding-left: 15px;<br>
+                                        &emsp;     &emsp;&emsp;    background-color: yellow; <br>
+                                        &emsp;    &emsp;&emsp;    border: 1px solid red; <br>
+                                        &emsp;&emsp;    } <br>
+                                        &emsp;    &lt;/style&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &emsp;   &lt;h3 id="vd1"&gt;HTML&lt;/h3&gt; <br> 
+                        &emsp;    &lt;h3 id="vd2"&gt;HTML&lt;/h3&gt; <br>
+                        &emsp;   &lt;h3 id="vd3"&gt;HTML&lt;/h3&gt; <br>
+                        &emsp;   &lt;h3 id="vd4"&gt;HTML&lt;/h3&gt; <br>
+                        &lt;/body&gt; <br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <h3 style="padding-top: 15px;background-color: yellow;border: 1px solid red;">HTML</h3> <br>
+                        <h3 style="padding-right: 15px;background-color: yellow;border: 1px solid red;">HTML</h3> <br>
+                        <h3 style="padding-bottom: 15px;background-color: yellow;border: 1px solid red;">HTML</h3> <br>
+                        <h3 style="padding-left: 15px;background-color: yellow;border: 1px solid red;">HTML</h3> <br>
+                    </div>
+                    <p>Tiếp theo mình sẽ lấy 1 ví dụ ở dạng tổng quát</p>
+                    <p> <b>VÍ DỤ:</b> <br>
+                        <p style="font-style: italic;">&lt;!--Đây là ví dụ ở dạng tổng quát, bạn chỉ cần khai báo pading:15px;.--&gt;</p>
+                        &lt;head&gt; <br>
+                        &emsp;    &lt;style&gt; <br>
+                        &emsp;&emsp;        #vd1{ <br>
+                            &emsp;    &emsp;&emsp;    padding:15px; //chỉ cần khai báo padding:'kich thước' là tất cả các cạnh sẽ được đẩy vào <br>
+                            &emsp;   &emsp;&emsp;    background-color: yellow; <br>
+                            &emsp;   &emsp;&emsp;    border: 1px solid red; <br>
+                            &emsp;&emsp;   } <br>
+                            
+                         &emsp;    &lt;/style&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &emsp;   &lt;h3 id="vd1"&gt;HTML&lt;/h3&gt; <br> 
+                        &lt;/body&gt; <br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <h3 style="padding:15px;background-color: yellow;border: 1px solid red;">HTML</h3> <br>
+                    </div>
+                </div>
+
+                <div>
+                    <p><b> 2.Điều khiển bằng : margin.</b></p>
+
+                    <p>
+                        Thuộc tính margin khi sử dụng sẽ thêm khoảng không gian bên ngoài thành phần, khoảng không gian này không cộng dồn thêm vào chiều rộng hoặc chiều cao của thành phần.
+
+                        Thuộc tính margin được chia ra làm 2 dạng: </p>
+                    <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                        <p><b>Dạng cơ bản gồm 4 thuộc tính:</b></p>
+                       <p>margin-top: thêm khoảng không gian bên ngoài phía trên thành phần. <br>
+                        margin-right: thêm khoảng không gian bên ngoài phía bên phải thành phần. <br>
+                        margin-bottom: thêm khoảng không gian bên ngoài phía dưới thành phần. <br>
+                        margin-left: thêm khoảng không gian bên ngoài phía bên trái thành phần.</p> 
+                          
+                    </div>
+                        <br>
+                    <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                        <p><b>Dạng tổng quát gồm 4 thuộc tính: </b></p> 
+                        <p>margin với 4 giá trị. <br>
+                            margin với 3 giá trị. <br>
+                            margin với 2 giá trị. <br>
+                            margin với 1 giá trị.</p>                 
+                    </div>
+                    <br>
+                    <i>Kết hợp dạng cơ bản và dạng tổng quát: được sử dụng trong trường hợp muốn điều chỉnh lại giá trị của thuộc tính tổng quát.</i>
+                    
+                    <p><b>VÍ DỤ:</b> 
+                        <p style="font-style: italic;">&lt;!--Cũng giống như padding mình cũng sẽ làm 2 ví dụ dạng cơ bản và tổng quát--&gt;</p>
+                       
+                            &lt;head&gt; <br>
+                        &emsp;    &lt;style&gt; <br>
+                        &emsp;&emsp;        #vd1{ <br>
+                            &emsp;    &emsp;&emsp;    margin-top: 35px; <br>
+                            &emsp;   &emsp;&emsp;    background-color: yellow; <br>
+                            &emsp;   &emsp;&emsp;    border: 1px solid red; <br>
+                            &emsp;&emsp;   } <br>
+                            &emsp;&emsp;    #vd2{ <br>
+                                &emsp;   &emsp;&emsp;        margin-right: 35px; <br>
+                                &emsp;   &emsp;&emsp;    background-color: yellow; <br>
+                                &emsp;   &emsp;&emsp;    border: 1px solid red; <br>
+                                &emsp;&emsp;   } <br>
+                                &emsp;&emsp;    #vd3{ <br>
+                                    &emsp;      &emsp;&emsp;        margin-bottom: 35px; <br>
+                                    &emsp;     &emsp;&emsp;    background-color: yellow; <br>
+                                    &emsp;    &emsp;&emsp;    border: 1px solid red; <br>
+                                    &emsp;&emsp;   } <br>
+                                    &emsp;&emsp;   #vd4{ <br> 
+                                        &emsp;    &emsp;&emsp;       margin-left: 35px;<br>
+                                        &emsp;     &emsp;&emsp;    background-color: yellow; <br>
+                                        &emsp;    &emsp;&emsp;    border: 1px solid red; <br>
+                                        &emsp;&emsp;    } <br>
+                                        &emsp;&emsp;    #divVD{ <br>
+                                            &emsp;   &emsp;&emsp;    background-color: green; <br>
+                                            &emsp;  &emsp;&emsp;    width:150px <br>
+                                            &emsp;  &emsp;&emsp;   border: 1px solid black; <br>
+                                            &emsp;&emsp;  } <br>
+                                        &emsp;    &lt;/style&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &emsp;     &lt;div id="divVD"&gt;  <br>
+                        &emsp; &emsp;       &lt;h3 id="vd1"&gt;HTML&lt;/h3&gt; <br> 
+                        &emsp;    &lt;/div&gt; <br>
+                        &emsp; &lt;div id="divVD"&gt; <br>
+                        &emsp; &emsp; &lt;h3 id="vd2"&gt;HTML&lt;/h3&gt;  <br>
+                        &emsp;  &lt;/div&gt; <br>
+
+                        &emsp;  &lt;div id="divVD"&gt; <br>
+                        &emsp;  &emsp;   &lt;h3 id="vd3"&gt;HTML&lt;/h3&gt;  <br>
+                        &emsp;   &lt;/div&gt; <br>
+                        
+
+                        &emsp; &lt;div id="divVD"&gt; <br>
+                        &emsp; &emsp;   &lt;h3 id="vd4"&gt;HTML&lt;/h3&gt; <br>
+                        &emsp;  &lt;/div&gt;    <br>  
+                        
+                        &lt;/body&gt; <br> 
+                    </p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <div style="background-color: green; width:150px; border: 1px solid black; border: 1px solid red;">
+                            <h3 style="margin-top:35px ; background-color: yellow;">HTML</h3>
+                        </div>
+                        <br>
+                        <div style="background-color: green; width:150px; border: 1px solid black; border: 1px solid red;">
+                            <h3 style="margin-right:35px ; background-color: yellow;">HTML</h3>
+                        </div>
+                        <br>
+                        <div style="background-color: green; width:150px; border: 1px solid black; border: 1px solid red;">
+                            <h3 style="margin-bottom:35px ; background-color: yellow;">HTML</h3>
+                        </div>
+                        <br>
+                        <div style="background-color: green; width:150px; border: 1px solid black; border: 1px solid red;">
+                            <h3 style="margin-left:35px ; background-color: yellow;">HTML</h3>
+                        </div>
+                    </div>
+
+                    <p>Tiếp theo mình sẽ lấy 1 ví dụ ở dạng tổng quát</p>
+                    <p> <b>VÍ DỤ:</b> <br>
+                        <p style="font-style: italic;">&lt;!--Đây là ví dụ ở dạng tổng quát, bạn chỉ cần khai báo margin:35px;.--&gt;</p>
+                        &lt;head&gt; <br>
+                        &emsp;    &lt;style&gt; <br>
+                        &emsp;&emsp;        #vd1{ <br>
+                            &emsp;    &emsp;&emsp;    margin:35px; //chỉ cần khai báo margin:'kich thước' là tất cả các cạnh sẽ được đẩy vào <br>
+                            &emsp;   &emsp;&emsp;    background-color: yellow; <br>
+                            &emsp;   &emsp;&emsp;    border: 1px solid red; <br>
+                            &emsp;&emsp;   } <br>
+                            &emsp;&emsp;    #divVD{ <br>
+                                &emsp;   &emsp;&emsp;    background-color: green; <br>
+                                &emsp;  &emsp;&emsp;    width:150px <br>
+                                &emsp;  &emsp;&emsp;   border: 1px solid black; <br>
+                                &emsp;&emsp;  } <br>
+                            
+                         &emsp;    &lt;/style&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &emsp;     &lt;div id="divVD"&gt;  <br>
+                        &emsp; &emsp;       &lt;h3 id="vd1"&gt;HTML&lt;/h3&gt; <br> 
+                        &emsp;    &lt;/div&gt; <br>
+                        &lt;/body&gt; <br>
+                    </p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <div style="background-color: green; width:150px; border: 1px solid black; border: 1px solid red;">
+                            <h3 style="margin:35px ; background-color: yellow;">HTML</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <p><b> 3.Điều khiển bằng : display.</b></p>
+                    <p>Thuộc tính display : Xác định sự hiển thị cho thành phần, chuyển đổi thành phần từ dạng dạng này sang dạng khác. <br>
+
+                        Thuộc tính display có rất nhiều dạng, trong bài này mình chỉ giới thiệu 2 kiểu mình hay sử dụng nhất: <br>
+                        
+                        <b>display: block</b> //Có tác dụng hiển thị nội dung của thẻ <br>
+                        <b>display: none</b>  //Có tác dụng ẩn nội dung của thẻ<br>
+        
+                    </p>
+                    <p>Chúng ta cùng thử nhé</p> 
+                    <p>
+                        <b>VÍ DỤ:</b> <br>
+                        &emsp; &lt;head&gt;<br>
+                        &emsp; &emsp;    &lt;style&gt; <br>
+                        &emsp; &emsp;&emsp;      #vd1{ <br>
+                            &emsp;&emsp; &emsp; &emsp;      display: block; <br>
+                            &emsp;&emsp; &emsp; &emsp;       background-color: green; <br>
+                            &emsp;&emsp; &emsp; &emsp;      color: red; <br>
+                            &emsp; &emsp; &emsp;    } <br>
+                            &emsp; &emsp; &emsp;     #vd2{ <br>
+                                &emsp;  &emsp; &emsp; &emsp;        display: none; <br>
+                                &emsp;&emsp; &emsp; &emsp;          background-color: green; <br>
+                                &emsp;&emsp; &emsp; &emsp;          color: red; <br>
+                                &emsp; &emsp; &emsp;    } <br>
+                                &emsp; &emsp;   &lt;/style&gt; <br>
+                        &lt;/head&gt; <br>
+
+                        &lt;body&gt; <br>
+                        &emsp;     &lt;div id="vd1"&gt; <br>
+                        &emsp; &emsp;          &lt;h3&gt;HTML 1&lt;/h3&gt; <br>
+                        &emsp;    &lt;/div&gt;   <br>
+                                <br>
+                        &emsp;   &lt;div id="vd2"&gt; <br>
+                        &emsp; &emsp;        &lt;h3&gt;HTML 2&lt;/h3&gt; <br>
+                        &emsp;    &lt;/div&gt;  <br>
+                        &lt;/body&gt; <br>
+
+
+                        <p style="font-style: italic;">&lt;!--Đoạn code trên sẽ cho ta thấy tác dụng của block và none, HTML 1 sẽ hiển thị còn HTML 2 sẽ ẩn--&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <div style="background-color: green; color:red">
+                            <h3>HTML 1</h3>
+                        </div>
+                    </div>
+                    <p>Ngoài ra còn nhiều các ví dụ và các kiểu của display các bạn có thể tham khảo tại web: <a href="https://www.w3schools.com/css/default.asp">w3schools.com</a> </p>
+                </div>
+            </div>   
+        </div>
+    
+        <!---->
+
+
+        <div id="type_bt" style="padding: 15px; display:none;">
+            <h2>Giới thiệu Bootstrap</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <!---->
+                <h2>Bootstrap là gì?</h2>
+                <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                    <p> Bootstrap là một framework bao gồm các HTML,
+                        CSS và JavaScript template dùng để phát triển website chuẩn responsive.</p>
+                    <p>
+                </div>
+                <p> <b>Bootstrap</b>  cho phép quá trình thiết kế website diễn ra nhanh chóng và dễ dàng hơn dựa trên những thành tố cơ bản sẵn có như typography, forms, buttons, tables, grids, navigation, image carousels… 
+                </p>
+
+                <p><b>Bootstrap</b> là một bộ sưu tập miễn phí của các <i>mã nguồn mở</i> và công cụ dùng để tạo ra một mẫu webiste hoàn chỉnh. Với các thuộc tính về giao diện được quy định sẵn như kích thước, màu sắc, độ cao, độ rộng…, 
+                    các designer có thể sáng tạo nhiều sản phẩm mới mẻ nhưng vẫn tiết kiệm thời gian khi làm việc với framework này trong quá trình thiết kế giao diện website.</p>
+                
+                <h2>1. Lịch sử Bootstrap</h2>
+                
+                <div style="width: 100%; display:flex;">
+                    <div style="margin: auto; width: 50% ; text-align:center;" >
+                            <img style="width: 100%;" src="https://wiki.matbao.net/wp-content/uploads/2019/09/bootstrap-la-gi-lich-su-cua-bootstrap.png" alt="ảnh minh họa">
+                            <p style="font-size:15px;font-style: italic;">Bootstrap trải qua nhiều chặng đường phát triển và cập nhật mới</p>
+                    </div>
+                </div>
+
+                <div style="width: 80%; background-color: gray; padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                    <p> Bootstrap là sản phẩm của Mark Otto và Jacob Thornton tại Twitter. 
+                        Nó được xuất bản như là một mã nguồn mở vào ngày 19/8/2011 trên GitHub. 
+                        Tên gọi ban đầu là Twitter Blueprint.</p>
+                    <p>
+                </div>
+                <p>
+                    Đến ngày 31/1/2012, <b>Bootstrap phiên bản 2</b> đã được phát hành. <b>Bootstrap 2</b>  được bổ sung bố cục lưới 12 cột với thiết kế tùy chỉnh đáp ứng cho nhiều màn hình kích thước.
+                    Tiếp nối sự thành công của phiên bản 2, <b>Bootstrap 3</b> ra đời vào ngày 19/8/2013 với giao diện tương thích với smartphone. <br>
+                    <br>
+                    Chỉ 3 năm sau ngày ra mắt, Bootstrap đã trở thành No.1 project trên GitHub.
+                    Vào tháng 10/2014, Mark Otto công bố phiên bản <b>Bootstrap 4</b> đang được phát triển.
+                    Phiên bản alpha đầu tiên của Bootstrap 4 đã được triển khai vào tháng 8/2015.
+                    Phiên bản mới nhất của Bootstrap được giới thiệu đến người dùng là <b>Bootstrap 4.3.1</b> Cho đến nay,
+                    Bootstrap vẫn là một trong những framework thiết kế website có lượng người dùng “khủng” nhất.
+                </p>
+                <h2>2. File chính của Boostrap</h2>
+                <p>
+                    3 file chính của Bootstrap
+                    Dưới đây là 3 File chính giúp quản lý các chức năng của Website và giao diện người dùng: <br>
+                    <b>Bootstrap.CSS</b> <br>
+                    <b>Bootstrap.JS</b> <br>
+                    <b>Glyphicons</b> <br>
+                </p>
+                <p> <b>Bootstrap.CSS</b> </p>
+                
+                <p>Nó là một Framework CSS có chức năng quản lý và sắp xếp bố cục của các trang Web. HTML có nhiệm vụ quản lý cấu trúc và nội dung thì CSS sẽ xử lý bố cục của Website. Vì vậy mà hai cấu trúc này phải tồn tại cùng nhau để thực hiện được hành động cụ thể. <br>
+                    <br>
+
+                    Giờ bạn sẽ không phải tốn thời gian để chỉnh sửa thủ công chỉ để thay đổi một thiết kế nhỏ. Thay vào đó, bạn có thể dùng CSS để tạo giao diện thống nhất trên nhiều Website mà không bị giới hạn. <br>
+                    <br>
+                    Hàm CSS không chỉ giới hạn ở kiểu văn bản mà còn dùng định dạng như bảng, bố cục hình. Bạn cần mất một ít thời gian để CSS ghi nhớ hết tất cả các khai báo và bộ chọn. <br>
+                </p>
+                <p> <b>Bootstrap.JS</b> </p>
+                <div style="width: 100%; display:flex;">
+                    <div style="margin: auto; width: 50% ; text-align:center;" >
+                            <img style="width: 100%;" src="https://wiki.matbao.net/wp-content/uploads/2021/01/bootstrap-2.jpg" alt="ảnh minh họa">
+                            <p style="font-size:15px;font-style: italic;">File JavaScript sẽ chịu trách nhiệm cho việc tương tác của các trang Web</p>
+                    </div>
+                </div>
+                <p>
+                Đây là phần cốt lõi vì chứa các File JavaScript, nó chịu trách nhiệm cho việc tương tác của Website. Để tiết kiệm thời gian viết cú pháp JavaScript mà nhiều nhà phát triển sẽ sử dụng jQuery. Đây là thư viện JavaScript mã nguồn mở, đa nền tảng giúp bạn thêm nhiều chức năng vào trang Web. <br>
+                <br>
+
+                Theo kinh nghiệm của tôi, jQuery sẽ thực hiện một số chức năng như: <br>
+                        <br>
+                Thực hiện các yêu cầu của Ajax như: loại trừ dữ liệu đến từ một vị trí khác một cách linh hoạt. <br>
+                Giúp tạo các tiện ích bằng bộ sưu tập Plugin JavaScript. <br>
+                jQuery sẽ tạo hình động tùy chỉnh bằng các thuộc tính của CSS. <br>
+                Thêm một số tính năng động cho nội dung các trang Web của bạn. <br>
+                <br>
+                Tuy Bootstrap với các thuộc tính Element HTML và CSS có thể hoạt  
+                động tốt, nhưng vẫn cần jQuery để tạo thiết kế Responsive. Nếu thiếu đi phần này, bạn chỉ có thể dùng các phần tĩnh của CSS mà thôi. <br>
+                </p>
+                <p><b>Glyphicons</b></p>
+                <p>Trong giao diện trang Web, phần không thể thiếu chính là Icons. Chúng thường được liên kết với các dữ liệu nhất định và các hành động trong giao diện người dùng. <br>
+                    <br>
+
+                    Bootstrap dùng Glyphicons để đáp ứng nhu cầu trên và nó đã mở khóa bộ Halflings Glyphicons để bạn sử dụng miễn phí. Tại bản miễn phí, tuy chỉ có giao diện chuẩn nhưng phù hợp với các chức năng thiết yếu. <br>
+                    <br>
+                    Nếu như bạn muốn có các Icon phong cách hơn thì có thể mua bộ bộ Icon Premium khác nhau. Chắc chắn các Icon tại Glyphicons sẽ giúp cho trang Web của bạn trông đẹp và nổi bật hơn.</p> 
+
+                
+                <H2>3. Tại sao nên dùng Bootstrap</H2>
+
+                <div style="width: 100%; display:flex;">
+                    <div style="margin: auto; width: 50% ; text-align:center;" >
+                            <img style="width: 100%;" src="https://wiki.matbao.net/wp-content/uploads/2019/09/bootstrap-la-gi-tai-sao-nen-dung-bootstrap-1024x576.jpg" alt="ảnh minh họa">
+                            <p style="font-size:15px;font-style: italic;">Bootstrap rất phổ biến và là một lựa chọn tối ưu trong thiết kế web</p>
+                    </div>
+                </div>
+
+                <p>Giữa muôn vàn ứng dụng thiết kế website hiện nay, Bootstrap vẫn có khả năng cạnh tranh cao là nhờ những đặc điểm nổi bật sau: <br>
+                    <br>
+
+                    <b>Dễ dàng thao tác</b>  <br>
+                    Tùy chỉnh dễ dàng <br>
+                    Chất lượng sản phẩm đầu ra hoàn hảo <br>
+                    Độ tương thích cao <br>
+                    <br>
+
+                    <b>Dễ dàng thao tác</b>  <br>
+                    Cơ chế hoạt động của Bootstrap là dựa trên xu hướng mã nguồn mở HTML, CSS và Javascript. Người dùng cần trang bị kiến thức cơ bản 3 mã này mới có thể sử dụng Bootstrap hiệu quả. Bên cạnh đó, các mã nguồn này cũng có thể dễ dàng thay đổi và chỉnh sửa tùy ý. <br>
+                    <br>
+                    
+                    <b>Tùy chỉnh dễ dàng</b>  <br>
+                    Bootstrap được tạo ra từ các mã nguồn mở cho phép designer linh hoạt hơn. Giờ đây có thể lựa chọn những thuộc tính, phần tử phù hợp với dự án họ đang theo đuổi. CDN Boostrap còn giúp bạn tiết kiệm dung lượng vì không cần tải mã nguồn về máy. <br>
+                     <br>
+
+                    <b>Chất lượng sản phẩm đầu ra hoàn hảo</b>  <br>
+                    Bootstrap là sáng tạo của các lập trình viên giỏi trên khắp thế giới. Bootstrap đã được nghiên cứu và thử nghiệm trên các thiết bị. Được kiểm tra nhiều lần trước khi đưa vào sử dụng. Do đó, khi chọn Bootstrap, bạn có thể tin rằng mình sẽ tạo nên những sản phẩm với chất lượng tốt nhất. <br>
+                    <br>
+                    <b>Độ tương thích cao</b>  <br>
+                    Điểm cộng lớn nhất của Bootstrap là khả năng tương thích với mọi trình duyệt và nền tảng. Đây là một điều cực kì quan trọng và cần thiết trong trải nghiệm người dùng. Sử dụng Grid System cùng với hai bộ tiền xử lý Less và Sass, Bootstrap mặc định hỗ trợ Responsive và ưu tiên cho các giao diện trên thiết bị di động hơn. Bootstrap có khả năng tự động điều chỉnh kích thước trang website theo khung browser. Mục đích để phù hợp với màn hình của máy tính để bàn, tablet hay laptop.
+                </p>
+                <h2>4. Cấu trúc và tính năng của Bootstrap</h2>
+                <div style="width: 100%; display:flex;">
+                    <div style="margin: auto; width: 50% ; text-align:center;" >
+                            <img style="width: 100%;" src="https://wiki.matbao.net/wp-content/uploads/2019/09/bootstrap-la-gi-cau-truc-va-tinh-nang-cua-bootstrap.png" alt="ảnh minh họa">
+                            <p style="font-size:15px;font-style: italic;">Cấu trúc gọn nhẹ khiến chức năng của Bootstrap trở nên linh hoạt</p>
+                    </div>
+                </div>
+
+                <p>Bootstrap chứa các tập tin JavaScript, CSS và fonts đã được biên dịch và nén lại. Ngoài ra, Bootstrap được thiết kế dưới dạng các mô-đun. Do đó,  dễ dàng tích hợp với hầu hết các mã nguồn mở như WordPress, Joomla, Magento, … <br>
+                    <br> Trong đó, Bootstrap mang đến nhiều chức năng nổi bật. <br>
+                    <br>
+
+                 <b>Bootstrap</b>  cho phép người dùng truy cập vào thư viện “khổng lồ” các thành tố dùng để tạo nên giao diện của một website hoàn chỉnh như font, typography, form, table, grid…
+                 <br><br><b>Bootstrap</b> cho phép bạn tùy chỉnh framework của website trước khi tải xuống và sử dụng nó tại trang web của khung.
+                <br><br><b>Tái sử dụng</b>  các thành phần lặp đi lặp lại trên trang web.
+                <br> <br><b>Bootstrap được tích hợp jQuery</b>. Bạn chỉ cần khai báo chính xác các tính năng trong quá trình lập trình web của bạn.
+                Định nghĩa glyphicons nhằm giảm thiểu việc sử dụng hình ảnh làm biểu tượng và tăng tốc độ tải trang.</p>
+
+
+                <h2>5. Cách cài đặt Bootstrap</h2>
+                <p>
+                    Biết về Bootstrap là gì vẫn chưa đủ. Bạn cần phải biết cách cài đặt và sử dụng Bootstrap như thế nào? Có hai cách phổ biến để tải Bootstrap về web hosting của bạn:
+
+                    Tải trực tiếp từ trang cung cấp Bootstrap
+                    Thông qua CDN Bootstrap
+                    Tải về từ trang Bootstrap
+                </p>
+                <div style="width: 100%; display:flex;">
+                    <div style="margin: auto; width: 50% ; text-align:center;" >
+                            <img style="width: 100%;" src="https://wiki.matbao.net/wp-content/uploads/2019/09/bootstrap-la-gi-huong-dan-su-dung-bootstrap-4-co-ban.png" alt="ảnh minh họa">
+                            <p style="font-size:15px;font-style: italic;">Có thể tải Bootstrap từ nguồn trang riêng và cài đặt ở máy</p>
+                    </div>
+                </div>
+
+                <p>Bạn có thể tải Bootstrap từ trang chủ <a href="https://getbootstrap.com/">https://getbootstrap.com/</a>. Sau khi tải về, bạn sẽ nhận được cấu trúc gồm hai thư mục JS và CSS. Bạn cần giải nén và cài đặt vào web hosting thông qua giao thức FTP. Bạn có thể xem bài viết “FTP là gì?” để biết cách sử dụng giao thức FTP trao đổi dữ liệu giữa máy cá nhân và web hosting.</p>
+                <p>Chỉ với những bước đơn giản trên, người dùng đã có thể sử dụng Bootstrap cho việc thiết kế ngay lập tức. Vì đây là phiên bản được biên dịch sẵn nên quá trình tải về và nhúng Bootstrap vào website diễn ra vô cùng nhanh chóng.</p>
+                <!---->
+            </div>   
+        </div>
+        
+
+
+
+        <div id="type_vdbt" style="padding: 15px; display:none;">
+            <h2>Các ví dụ về Bootstrap</h2>
+            <div style="width: 100%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <!---->
+                <div>
+                    <p> <b>1. Tạo bảng bằng Bootstrap</b> </p>
+                    <p>Một bảng Bootstrap cơ bản có một lớp đệm nhẹ và chỉ có các đường chia ngang.
+                        <br><br>
+                        Các .table lớp học thêm phong cách cơ bản để một bảng:</p>
+
+
+                    <p> <b>VÍ DỤ:</b> <br>
+                        &lt;head&gt; <br>
+                        &emsp;    &lt;title&gt;Bootstrap Example&lt;/title&gt; <br>
+                        &emsp;    &lt;meta charset="utf-8"&gt; <br>
+                        &emsp;    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; <br>
+                        &emsp;   &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"&gt; <br>
+                        &emsp;    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt; <br>
+                        &emsp;    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"&gt;&lt;/script&gt; <br>
+                        &lt;/head&gt; <br>
+
+                        &lt;body&gt; <br>
+                        &emsp;    &lt;div class="container"&gt; <br>
+                        &emsp;  &emsp;  &lt;h2&gt;Bảng Basic&lt;/h2&gt; <br>
+                        
+                        &emsp;   &emsp; &lt;table class="table"&gt; <br>
+                        &emsp;   &emsp;  &emsp;   &lt;thead&gt; <br>
+                        &emsp;   &emsp;   &emsp;  &emsp;&lt;tr&gt; <br>
+                        &emsp;   &emsp;    &emsp;   &emsp; &emsp; &lt;th&gt;Firstname&lt;/th&gt; <br>
+                        &emsp;   &emsp;    &emsp;  &emsp; &emsp; &lt;th&gt;Lastname&lt;/th&gt; <br>
+                        &emsp;   &emsp;    &emsp;  &emsp;&emsp; &lt;th&gt;Email&lt;/th&gt; <br> 
+                        &emsp;   &emsp;   &emsp; &emsp;&lt;/tr&gt; <br>
+                        &emsp;   &emsp;  &emsp;  &lt;/thead&gt; <br>
+                        &emsp;   &emsp; &emsp; &lt;tbody&gt; <br>
+                        &emsp;   &emsp;   &emsp;  &emsp;&lt;tr&gt; <br>
+                        &emsp;    &emsp;  &emsp;    &emsp;&emsp; &lt;td&gt;John&lt;/td&gt; <br>
+                        &emsp;   &emsp;     &emsp;   &emsp;&emsp; &lt;td&gt;Doe&lt;/td&gt; <br>
+                        &emsp;    &emsp;    &emsp;   &emsp;  &emsp;         &lt;td&gt;john@example.com&lt;/td&gt; <br>
+                        &emsp;   &emsp;    &emsp;&emsp;&lt;/tr&gt; <br>
+                        &emsp;     &emsp;  &emsp; &emsp;&lt;tr&gt; <br>
+                        &emsp;     &emsp;   &emsp; &emsp; &emsp; &lt;td&gt;Mary&lt;/td&gt; <br>
+                        &emsp;     &emsp;  &emsp; &emsp; &emsp;  &lt;td&gt;Moe&lt;/td&gt; <br>
+                        &emsp;    &emsp;   &emsp;&emsp;  &emsp;  &lt;td&gt;mary@example.com&lt;/td&gt; <br> 
+                        &emsp;  &emsp;     &emsp;&emsp; &lt;/tr&gt; <br>
+                                    &emsp; &emsp; &emsp;   &emsp;    &lt;tr&gt; <br>
+                                    &emsp; &emsp; &emsp;    &emsp;     &emsp;  &lt;td&gt;July&lt;/td&gt; <br>
+                                    &emsp;&emsp;  &emsp;     &emsp;   &emsp;   &lt;td&gt;Dooley&lt;/td&gt; <br>
+                                    &emsp;  &emsp; &emsp;     &emsp; &emsp;   &lt;td&gt;july@example.com&lt;/td&gt; <br>
+                                  &emsp; &emsp;    &emsp;   &emsp; &lt;/tr&gt; <br>
+                                  &emsp; &emsp;  &emsp;      &lt;/tbody&gt; <br>
+                                  &emsp;  &emsp;      &lt;/table&gt; <br>
+                                 &emsp;    &lt;/div&gt; <br>
+                        &lt;/body&gt; <br>
+                    </p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:100% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <div class="container">
+                            <h2>Bảng Basic</h2>
+                           
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Firstname</th>
+                                  <th>Lastname</th>
+                                  <th>Email</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>John</td>
+                                  <td>Doe</td>
+                                  <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                  <td>Mary</td>
+                                  <td>Moe</td>
+                                  <td>mary@example.com</td>
+                                </tr>
+                                <tr>
+                                  <td>July</td>
+                                  <td>Dooley</td>
+                                  <td>july@example.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <br>
+                <div>
+                    <p><b>2. Nút Bootstrap</b> </p>
+                    <p>Các kiểu node mà Boostrap đã xây dựng sẵn chúng ta chỉ việc sử dụng</p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        <p style="font-style: italic;">&lt;!--Đặt đoạn code dưới vào html đã link vs bootstrap--&gt;</p>
+                        &lt;div class="container"&gt; <br>
+                        &emsp;    &lt;h2&gt;Kiểu Nút&lt;/h2&gt; <br>
+                        &emsp;    &lt;button type="button" class="btn"&gt;Basic&lt;/button&gt; <br>
+                        &emsp;    &lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt; <br>
+                        &emsp;    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt; <br>
+                        &emsp;    &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt; <br>
+                        &emsp;     &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt; <br>
+                        &emsp;    &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt; <br>
+                        &emsp;   &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt; <br>
+                        &emsp;    &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;   <br>    
+                          &lt;/div&gt; <br>
+                    </p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:100% ; box-shadow:3px 3px 3px grey; padding:15px; background-color:rgb(255, 251, 251)">
+                        <div class="container">
+                            <h2>Kiểu Nút</h2>
+                            <button type="button" class="btn">Basic</button>
+                            <button type="button" class="btn btn-default">Default</button>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-success">Success</button>
+                            <button type="button" class="btn btn-info">Info</button>
+                            <button type="button" class="btn btn-warning">Warning</button>
+                            <button type="button" class="btn btn-danger">Danger</button>
+                            <button type="button" class="btn btn-link">Link</button>      
+                          </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <p><b>3. Biểu mẫu Bootstrap</b></p>
+                    <p>
+                        Cài đặt mặc định của Bootstrap <br>
+                        Các điều khiển biểu mẫu tự động nhận một số kiểu chung với Bootstrap: <br> <br>
+
+                        Tất cả các văn bản &lt;input&gt;, &lt;textarea&gt;và &lt;select&gt;các yếu tố với lớp .form-control có chiều rộng 100%.
+                    </p>
+                    
+                    <p> <b>VÍ DỤ:</b> <br>
+                        <p style="font-style: italic;">&lt;!--Đặt đoạn code dưới vào html đã link vs bootstrap--&gt;</p>
+                        <p style="font-style: italic;">&lt;!--Ví dụ sau tạo một biểu mẫu dọc với hai trường đầu vào, một hộp kiểm và một nút gửi:--&gt;</p>
+                        <br>
+
+                        &lt;form action="/action_page.php"&gt; <br> 
+                        &emsp;    &lt;div class="form-group"&gt; <br>
+                        &emsp; &emsp;   &lt;label for="email"&gt;Email address:&lt;/label&gt; <br>
+                        &emsp; &emsp;   &lt;input type="email" class="form-control" id="email"&gt; <br>
+                              &emsp;   &lt;/div&gt; <br>
+                              &emsp;   &lt;div class="form-group"&gt; <br>
+                              &emsp; &emsp;    &lt;label for="pwd"&gt;Password:&lt;/label&gt; <br>
+                              &emsp; &emsp;   &lt;input type="password" class="form-control" id="pwd"&gt; <br>
+                              &emsp;  &lt;/div&gt; <br>
+                              &emsp;  &lt;div class="checkbox"&gt; <br>
+                              &emsp; &emsp;    &lt;label&gt;&lt;input type="checkbox"&gt; Remember me&lt;/label&gt; <br>
+                              &emsp; &lt;/div&gt; <br>
+                              &emsp; &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt; <br>
+                          &lt;/form&gt; <br>
+
+
+                    </p>
+                        
+
+                    <br>
+
+                    <p>KẾT QUẢ</p>
+                    <div style="width:50% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                              <label for="email">Email address:</label>
+                              <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Password:</label>
+                              <input type="password" class="form-control" id="pwd">
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox"> Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                          </form>
+                    </div>
+                </div>
+
+
+                <br>
+
+
+                <div>
+                    <p><b>4. Phân trang web</b></p>
+                    <p>Nếu bạn phải quản lý nhiều trang web trong một trang hay một list danh sách file html nào đó bạn có thể sử dụng ví dụ này.</p>
+                    <p> <b>VÍ DỤ:</b> <br>
+                        <p style="font-style: italic;">&lt;!--Đặt đoạn code dưới vào html đã link vs bootstrap--&gt;</p>
+                        <p style="font-style: italic;">&lt;!--Để tạo phân trang cơ bản, hãy thêm .paginationlớp vào một &lt;ul&gt; phần tử:--&gt;</p>
+                        
+                        &emsp;    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+                        &emsp;   &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+                        &emsp;   &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+                        &emsp;   &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+                        &emsp;   &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    </p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <ul class="pagination">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                          </ul>
+                    </div>
+                </div>
+                <br>
+                <p>Ngoài ra còn rất nhiều ví dụ hay mà Bootstrap đem lại các bạn có thể xem thêm tại trang web: <a href="https://www.w3schools.com/bootstrap/bootstrap_pagination.asp">w3schools.com</a> </p>
+                <!---->
+            </div>   
+        </div>
+    <!--MID-->
+    </div>
+
+    <script language="javascript">
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("type_cp").style.display = 'block';
+            document.getElementById("type_bc").style.display = 'none';
+            document.getElementById("type_dd").style.display = 'none';
+            document.getElementById("type_dk").style.display = 'none';
+            document.getElementById("type_bt").style.display = 'none';
+            document.getElementById("type_vdbt").style.display = 'none';
+
+
+            document.getElementById("btn2").style.background = 'yellow';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+
+            
+
+        };
+        document.getElementById("btn3").onclick = function () {
+            document.getElementById("type_cp").style.display = 'none';
+            document.getElementById("type_bc").style.display = 'block';
+            document.getElementById("type_dd").style.display = 'none';
+            document.getElementById("type_dk").style.display = 'none';
+            document.getElementById("type_bt").style.display = 'none';
+            document.getElementById("type_vdbt").style.display = 'none';
+
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'yellow';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+
+
+        };
+        document.getElementById("btn4").onclick = function () {
+            document.getElementById("type_cp").style.display = 'none';
+            document.getElementById("type_bc").style.display = 'none';
+            document.getElementById("type_dd").style.display = 'block';
+            document.getElementById("type_dk").style.display = 'none';
+            document.getElementById("type_bt").style.display = 'none';
+            document.getElementById("type_vdbt").style.display = 'none';
+
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'yellow';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+
+
+        };
+        document.getElementById("btn5").onclick = function () {
+            document.getElementById("type_cp").style.display = 'none';
+            document.getElementById("type_bc").style.display = 'none';
+            document.getElementById("type_dd").style.display = 'none';
+            document.getElementById("type_dk").style.display = 'block';
+            document.getElementById("type_bt").style.display = 'none';
+            document.getElementById("type_vdbt").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'yellow';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+
+
+        };
+        document.getElementById("btn6").onclick = function () {
+            document.getElementById("type_cp").style.display = 'none';
+            document.getElementById("type_bc").style.display = 'none';
+            document.getElementById("type_dd").style.display = 'none';
+            document.getElementById("type_dk").style.display = 'none';
+            document.getElementById("type_bt").style.display = 'block';
+            document.getElementById("type_vdbt").style.display = 'none';
+
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'yellow';
+            document.getElementById("btn7").style.background = 'white';
+;
+
+        };
+        document.getElementById("btn7").onclick = function () {
+            document.getElementById("type_cp").style.display = 'none';
+            document.getElementById("type_bc").style.display = 'none';
+            document.getElementById("type_dd").style.display = 'none';
+            document.getElementById("type_dk").style.display = 'none';
+            document.getElementById("type_bt").style.display = 'none';
+            document.getElementById("type_vdbt").style.display = 'block';
+
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'yellow';
+   
+
+        };
+
+    </script>
+   
+   
+</body>
+</html>

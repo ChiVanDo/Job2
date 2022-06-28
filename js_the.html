@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html_css.css">
+<body>
+    
+    <div id="left">
+     
+    </div>
+    <!--Thân-->
+    <div id="mid">
+        <div>
+            <div id="head">
+                <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 50px;">JavaScript</h1>
+            </div>
+            <div id="dh">
+                <ul>
+                    <li><a href="js.html">GIỚI THIỆU</a></li>
+                    <li><a style="background-color: #41737a;" href="js_the.html">VÍ DỤ</a></li>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+
+                    
+                    <li style="float: right;"><a href="html.html">JavaScript</a></li>
+                    <li style="float: right;"><a href="css.html">CSS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Điều hướng-->
+        <div style="float: left;">
+            <input style="background-color: yellow; padding:3px;" type="button" id="btn2" value="Các lệnh điều khiển"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn3" value="Hàm"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn4" value="DOM, JavaScript"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn5" value="XML, JSON, AJAX"/>
+        </div>
+        <!--Thân-->
+        <div id="type_loop" style="padding: 15px; display:block;">
+            <h2>Các lệnh điều khiển</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p><b>1. Theo điều kiện</b> </p>
+
+                    <p>Câu lệnh điều kiện được sử dụng để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau.</p>
+                    <p> <b>Câu lệnh if</b>  <br>
+                    Sử dụng câu lệnh if để chỉ định một khối mã JavaScript sẽ được thực thi nếu một điều kiện là đúng.</p>
+                    <p> Cú pháp </p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(243, 234, 234)">
+                        <p>if (điều khiện) { <br>
+                            //  nếu điều kiện đúng thì các lệnh trong đây sẽ được thực hiện <br>
+                          } </p>
+                    </div>
+
+                    <p> <b>VÍ DỤ:</b><br>
+                        <p style="font-style: italic;">&lt;!--Ví dụ này cũng thể hiện cấu trúc của javascript--&gt;</p> 
+                        &lt;body&gt; <br>
+                        &emsp;    &lt;h2&gt;JavaScript if&lt;/h2&gt; <br>
+
+                        &emsp;    &lt;p&gt;Hiển thị 'Ban ngày' nếu thời gian hiện tại &lt; 18&lt;/p&gt; <br>
+
+                        &emsp;    &lt;p id="demo"&gt;CHẾ ĐỘ: Ban đêm&lt;/p&gt; <br>
+
+                        &emsp;    &lt;script&gt; <br>
+                        &emsp;    &emsp;if (new Date().getHours() &lt; 18) { <br>
+                            &emsp;   &emsp; document.getElementById("demo").innerHTML = "Ban ngày!"; // thay đổi nội dung bên trong thẻ có id demo <br>
+                            &emsp;   &emsp; } <br>
+                            &emsp;&lt;/script&gt; <br>
+                        &lt;/body&gt; <br>
+                    </p> 
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <h3>JavaScript if</h3>
+                        <p>Hiển thị 'Ban ngày' nếu thời gian hiện tại < 18</p>
+                        <p id="demo">CHẾ ĐỘ: Ban đêm</p>
+                        <script>
+                        if (new Date().getHours() < 18) {
+                        document.getElementById("demo").innerHTML = "CHẾ ĐỘ: Ban ngày";
+                        }
+                        </script>
+                    </div>
+                    <p>Và ngược lại của điều kiện chúng ta câu lệnh <b>Else</b></p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;body&gt; <br>
+                        &emsp;    &lt;h2&gt;JavaScript if&lt;/h2&gt; <br>
+
+                        &emsp;    &lt;p&gt;Hiển thị 'Chào buổi sáng' nếu thời gian hiện tại &lt; 18&lt;/p&gt; <br>
+                        &emsp;    &lt;p&gt;Hiển thị 'Chào buổi tối' nếu thời gian hiện tại &gt; 18&lt;/p&gt; <br>
+
+                        &emsp;    &lt;p id="demo1"&gt; &lt;/p&gt; <br>
+
+                        &emsp;    &lt;script&gt; <br>
+                        &emsp;    &emsp;if (new Date().getHours() &lt; 18) { <br>
+                            &emsp;   &emsp; document.getElementById("demo1").innerHTML = "Chào buổi sáng"; // thay đổi nội dung bên trong thẻ có id demo <br>
+                            &emsp;   &emsp; } <br>
+                            &emsp;    &emsp;if (new Date().getHours() &gt; 18) { <br>
+                                &emsp;   &emsp; document.getElementById("demo1").innerHTML = "Chào buổi tối"; // thay đổi nội dung bên trong thẻ có id demo <br>
+                                &emsp;   &emsp; } <br>
+                            &emsp;&lt;/script&gt; <br>
+                        &lt;/body&gt; <br>
+                        <p>Kết quả</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <h3>JavaScript if</h3>
+                        <p>Hiển thị 'Chào buổi sáng' nếu thời gian hiện tại < 18</p>
+                        <p>Hiển thị 'Chào buổi tối' nếu thời gian hiện tại > 18</p>
+                        <p id="demo1"></p>
+                        <script>
+                        if (new Date().getHours() < 18) {
+                        document.getElementById("demo1").innerHTML = "Chào buổi sáng";
+                        }
+                        else{
+                            document.getElementById("demo1").innerHTML = "Chào buổi tối";
+                        }
+                        </script>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <p> <b>2.Theo vòng lặp.</b> </p>
+                    <p><b>Vòng lặp While</b> </p>
+                    <p>Các vòng lặp có thể thực thi một khối mã miễn là một điều kiện được chỉ định là đúng.</p>
+                    <p>Cú pháp</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(243, 234, 234)">
+                        <p>while (điều khiện) { <br>
+                            //  nếu điều kiện đúng thì các lệnh trong đây sẽ được thực hiện cho tới khi có điều kiện dừng <br>
+                          } </p>
+                    </div>
+
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;h2&gt;JavaScript While Loop&lt;/h2&gt; <br>
+
+                        &lt;p id="demo2"&gt;&lt;/p&gt; <br>
+                        
+                        &lt;script&gt; <br>
+                        &emsp;  let text = "";  // dùng từ khóa let để thẻ hiện đây là 1 biến. <br>
+                        &emsp;  let i = 0;  // gán biến 1 bằng 0 <br>
+                        &emsp;   while (i &lt; 10) { // vòng lặp chạy 10 lần <br>
+                            &emsp; &emsp;  text += "&lt;br&gt;Số" + i; <br>
+                            &emsp; &emsp;  i++;  // mỗi lần chạy biến i tăng lên 1 đơn vị <br>
+                            &emsp;  } <br>
+                        document.getElementById("demo2").innerHTML = text; // thay đổi nội dung bên trong in demo2 bằng biến text<br>
+                        &lt;/script&gt; <br>
+                    </p>
+                    <br>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                        <h2>JavaScript While Loop</h2>
+
+                        <p id="demo2"></p>
+
+                        <script>
+                        let text = "";
+                        let i = 0;
+                        while (i < 10) {
+                        text += "<br>Số " + i;
+                        i++;
+                        }
+                        document.getElementById("demo2").innerHTML = text;
+                        </script>
+
+                    </div>
+
+                    <p><b>Vòng lặp For</b></p>
+                    <p><b>VÍ DỤ:</b> <br>
+                        &lt;h2&gt;JavaScript For In Loop&lt;/h2&gt;  <br>
+                        &lt;p id="demo4"&gt;&lt;/p&gt; <br>
+
+                        &lt;script&gt; <br> 
+                        &emsp;const person = {fname:"John", lname:"Doe", age:25}; //ta có 1 mảng chứa các phần tử <br>
+
+                        &emsp;let txt = ""; // tạo 1 biến txt <br>
+                        &emsp;for (let x in person) { // vòng lặp sẽ bắt đầu chạy với biến là x chạy trong person, duyệt các phần tử trong person <br>
+                            &emsp; &emsp;txt += person[x] + " "; // // lấy ra phần tử và gán vào biến txt <br>
+                            &emsp;} <br>
+
+                        document.getElementById("demo4").innerHTML = txt; // thay đổi id demo4 bằng biến txt <br>
+                        &lt;/script&gt; <br>
+                    </p>
+                    <br>
+                    <p>Kết quả</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <h2>JavaScript For In Loop</h2>
+                        <p>Kết quả</p>
+                        <p id="demo4"></p>
+
+                        <script>
+                        const person = {fname:"John", lname:"Doe", age:25}; 
+
+                        let txt = "";
+                        for (let x in person) {
+                        txt += person[x] + " ";
+                        }
+
+                        document.getElementById("demo4").innerHTML = txt;
+                        </script>
+
+                    </div>
+
+                    
+                </div>
+                
+            </div>   
+        </div>
+        <!---->
+        
+        <div id="type_ham" style="padding: 15px; display:none;">
+
+            <h2>Hàm và cách sử dụng hàm</h2>
+
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p><b>1. Hàm</b></p>
+                    <p>Hàm JavaScript là một khối mã được thiết kế để thực hiện một tác vụ cụ thể. <br>
+
+                        Một hàm JavaScript được thực thi khi "cái gì đó" gọi nó (gọi nó).
+                        
+                        </p>
+                    <p>Cáu trúc: <br>
+                        <b>function </b> 'tên hàm do người dùng đặt'('tham số truyền vào1','tham số truyền vào 2',...){ <br>
+                            // thực hiện khi hàm được gọi đến <br>
+                        }
+                    </p>
+                    <p> <b>VÍ DỤ:</b> <br>
+                        &lt;h2&gt;JavaScript Functions&lt;/h2&gt;  <br>
+
+                        &lt;p&gt;Đây là ví dụ về hàm , hàm sẽ thực hiện phép tính của 2 tham số truyền vào là p1,p2&lt;/p&gt; <br>
+
+                        &lt;p id="demo"&gt;&lt;/p&gt; <br>
+
+                        &lt;script&gt; <br>
+                        &emsp;function myFunction(p1, p2) { // hàm, có 2 tham số truyền vào <br>
+                            &emsp;&emsp; return p1 * p2; // hàm trả về kết quả p1*p2  <br>
+                            &emsp; } <br>
+                            &emsp; document.getElementById("demo").innerHTML = myFunction(4, 3); // thay thế id demo5  bằng kết quả của hàm và hiển thị <br>
+                        &lt;/script&gt;
+
+                    </p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        <h3>JavaScript Functions</h3>
+
+                        <p>Đây là 1 ví dụ về hàm , hàm sẽ thực hiện phép tính của 2 tham số truyền vào là p1=4,p2=3</p>
+
+                        <p id="demo5"></p>
+
+                        <script>
+                        function myFunction(p1, p2) {
+                        return p1 * p2;
+                        }
+                        document.getElementById("demo5").innerHTML = myFunction(4, 3);
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+        <div id="type_dom" style="padding: 15px; display:none;">
+            <h2>Đối tượng DOM , Javascript</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p> <b> 1.DOM là gì?</b></p>
+                    <p>Với HTML DOM, JavaScript có thể truy cập và thay đổi tất cả các phần tử của tài liệu HTML.</p>
+                    <p>DOM là tiêu chuẩn W3C (World Wide Web Consortium). <br>
+                        <br>
+                        DOM xác định một tiêu chuẩn để truy cập tài liệu: <br> <br>
+                        
+                        "Mô hình đối tượng tài liệu W3C (DOM) là một nền tảng và giao diện ngôn ngữ trung lập cho phép các chương trình và tập lệnh truy cập động và cập nhật nội dung, cấu trúc và kiểu của tài liệu."
+                        
+                        <br>
+                        Chuẩn DOM W3C được chia thành 3 phần khác nhau:
+                        <br>
+                        <br>
+                        Core DOM - mô hình tiêu chuẩn cho tất cả các loại tài liệu <br>
+
+                        DOM XML - mô hình tiêu chuẩn cho các tài liệu XML <br>
+                        HTML DOM - mô hình tiêu chuẩn cho các tài liệu HTML <br>
+                    </p>
+                    <p><b>Các phương thức hay dùng</b></p>
+                    <p><b>Phương thức getElementById</b> </p>
+                   <p>Cách phổ biến nhất để truy cập một phần tử HTML là sử dụng idphần tử đó. <br>
+
+                    Trong ví dụ trên, getElementByIdphương pháp được sử dụng id="demo"để tìm phần tử. <br></p> 
+                    <p><b>Thuộc tính bên trongHTML</b></p>
+                    <p>Cách dễ nhất để lấy nội dung của một phần tử là sử dụng thuộc innerHTMLtính. <br>
+
+                        Các innerHTMLtài sản là hữu ích để nhận hoặc thay thế nội dung của các phần tử HTML. <br>
+                         
+                        Các innerHTMLbất động sản có thể được sử dụng để có được hoặc thay đổi bất kỳ phần tử HTML, bao gồm &lt;html&gt; và &lt;body&gt;.</p>
+                    
+
+                    <p> <b>VÍ DỤ:</b> <br>
+                        <p>Ví dụ đơn giản về phương thức và thuộc tính</p>
+                        &lt;body&gt; <br>
+
+                        &emsp;    &lt;p id="demo"&gt;&lt;/p&gt; <br>
+                            
+                            &lt;script&gt; <br>
+                            &emsp;  document.getElementById("demo").innerHTML = "Hello World!"; <br>
+                            &lt;/script&gt; <br>
+                            
+                        &lt;/body&gt; <br>
+                        <p>chúng ta dùng phương thức document.getElementById("TÊN ID") sau đó dùng thuộc tính .innerHTML để thay đổi nội dung của id đó</p>
+                        </p> 
+                        <p>Kết quả</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; background-color:rgb(255, 251, 251)">
+                        
+                        <p id="dem"></p>
+
+                        <script>
+                            document.getElementById("dem").innerHTML = "Hello World!";
+                        </script>
+                    </div>
+                    <p>
+                        Bạn có thể xem thêm tài liệu về DOM các phương thức và thuộc tính tại : <a href="https://www.w3schools.com/js/js_htmldom_document.asp">w3schools.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+        <div id="type_json" style="padding: 15px; display:none;">
+            <h2>Giới thiệu về XNL, JSON, AJAX</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <div>
+
+                        <div>
+                            <p><b>1. AJAX là gì ?</b> </p>
+                            <p>
+                                AJAX = A J avaScript A nd X ML đồng bộ . <br>
+                                <br>
+    
+                                AJAX không phải là một ngôn ngữ lập trình. <br> <br>
+    
+                                AJAX chỉ sử dụng kết hợp: <br> <br>
+    
+                               <b>XMLHttpRequestĐối</b> tượng tích hợp trong trình duyệt (để yêu cầu dữ liệu từ máy chủ web) <br>
+                                JavaScript và HTML DOM (để hiển thị hoặc sử dụng dữ liệu) <br>
+                                AJAX là một cái tên gây hiểu lầm. Các ứng dụng AJAX có thể sử dụng XML để vận chuyển dữ liệu, nhưng việc vận chuyển dữ liệu dưới dạng văn bản thuần túy hoặc văn bản JSON cũng phổ biến như nhau. <br> <br>
+    
+                                AJAX cho phép các trang web được cập nhật không đồng bộ bằng cách trao đổi dữ liệu với một máy chủ web phía sau hậu trường. Điều này có nghĩa là có thể cập nhật các phần của trang web mà không cần tải lại toàn bộ trang.
+                            </p>
+    
+                            <p><b>Đối tượng XMLHttpRequest</b></p>
+    
+                                <p>Tạo một đối tượng XMLHttpRequest <br>
+                                    Tất cả các trình duyệt hiện đại (Chrome, Firefox, IE, Edge, Safari, Opera) đều có một XMLHttpRequestđối tượng tích hợp sẵn. <br>
+            
+                                    Cú pháp để tạo một XMLHttpRequestđối tượng: <br></p>
+                            
+                            <div style="background-color: aliceblue; padding:3px ; width:50%;">
+                                    <p>variable = new XMLHttpRequest();</p>
+                            </div>
+    
+                            <p>
+                                Xác định một chức năng gọi lại
+                                Hàm gọi lại là một hàm được truyền dưới dạng tham số cho một hàm khác.
+    
+                                Trong trường hợp này, hàm gọi lại phải chứa mã để thực thi khi phản hồi sẵn sàng.
+                                
+                                <div style="background-color: aliceblue; padding:3px ; width:50%;">
+                                    <p>xhttp.onload = function() { <br>
+                                        //Nội dung thực hiện khi hàm chạy <br>
+    
+                                        }</p>
+                            </div>
+                            <p>Gửi yêu cầu
+                                Để gửi yêu cầu đến máy chủ, bạn có thể sử dụng phương thức open () và send () của XMLHttpRequestđối tượng:
+                                
+                                <div style="background-color: aliceblue; padding:3px ; width:50%;">
+                                    <p>xhttp.open("GET", "ajax_info.txt"); <br>
+                                        xhttp.send();</p>
+                            </div>
+                            </p>
+                            
+    
+    
+    
+    
+                            <p><b>VÍ DỤ:</b> <br>
+                                &lt;h2&gt;The XMLHttpRequest Object&lt;/h2&gt; <br>
+    
+                                &lt;div id="demo7"&gt; <br>
+                                &emsp;  &lt;p&gt;Let AJAX change this text.&lt;/p&gt; <br>
+                                &emsp;  &lt;button type="button" onclick="loadDoc()"&gt;Change Content&lt;/button&gt; <br>
+                                &lt;/div&gt; <br>
+    
+                                &lt;script&gt; <br>
+                                &emsp;  function loadDoc() { <br>
+                                    &emsp; const xhttp = new XMLHttpRequest(); <br>
+                                    &emsp;  xhttp.onload = function() { <br>
+                                        &emsp;     &emsp;     document.getElementById("demo7").innerHTML = this.responseText; <br>
+                                        &emsp;  } <br>
+                                        &emsp;  xhttp.open("GET", "ajax_info.txt"); <br>
+                                        &emsp;  xhttp.send(); <br>
+                                        &emsp;  } <br>
+                                &lt;/script&gt;
+                            </p>
+                            <p>Kết quả</p>
+                            <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px;background-color:rgb(255, 251, 251)">
+                                <h2>The XMLHttpRequest Object</h2>
+    
+                                <div id="demo7">
+                                    <p>Let AJAX change this text.</p>
+                                    <button type="button" onclick="loadDoc()">Change Content</button>
+                                    </div>
+    
+                                    <script>
+                                    function loadDoc() {
+                                    const xhttp = new XMLHttpRequest();
+                                    xhttp.onload = function() {
+                                        document.getElementById("demo7").innerHTML = this.responseText;
+                                    }
+                                    xhttp.open("GET", "ajax_info.txt");
+                                    xhttp.send();
+                                    }
+                                    </script>
+                                </div>
+                        </div>
+    
+    
+                        <p> <b>2. JSON là gì?</b> </p>
+                        <p>JSON là viết tắt của <b>J</b>  ava <b>S</b> cript <b>O</b> bject <b>N</b> otation <br>
+
+                            JSON là một định dạng văn bản để lưu trữ và vận chuyển dữ liệu <br>
+                            
+                            JSON là "tự mô tả" và dễ hiểu</p>
+                        <p><b>VÍ DỤ:</b> <br>
+                            Ví dụ về JSON <br>
+                            Ví dụ này là một chuỗi JSON: <br>
+                            '{"ten":"Chí", "tuoi":24, "lop":"101203"}' <br> <br>
+
+                            Nó định nghĩa một đối tượng có 3 thuộc tính: <br>
+
+                            Tên <br>
+                            Tuổi <br>
+                            Lơp <br>
+
+                            <br>
+                            Mỗi thuộc tính có một giá trị.b
+
+                            Nếu bạn phân tích cú pháp chuỗi JSON bằng chương trình JavaScript, bạn có thể truy cập dữ liệu dưới dạng một đối tượng:
+                            <p>Ta sẽ lấy được các đối tượng trong Json qua các biến trong JavaScript bằng cách</p>
+                            <p>
+                                let personName = obj.ten; <br>
+                                let personAge = obj.tuoi; <br>
+                            </p>
+                            
+                        </p>
+                        <p> <b>Tại sao sử dụng JSON?</b>  <br>
+                            Định dạng JSON về mặt cú pháp tương tự như mã để tạo các đối tượng JavaScript. Do đó, một chương trình JavaScript có thể dễ dàng chuyển đổi dữ liệu JSON thành các đối tượng JavaScript. <br>
+                             <br>
+                            Vì định dạng chỉ là văn bản nên dữ liệu JSON có thể dễ dàng được gửi giữa các máy tính và được sử dụng bởi bất kỳ ngôn ngữ lập trình nào. <br>
+                             <br>
+                            JavaScript có một chức năng tích hợp để chuyển đổi các chuỗi JSON thành các đối tượng JavaScript: <br>
+                             <br>
+                            JSON.parse() <br>
+                    
+                            JavaScript cũng có một hàm tích hợp để chuyển đổi một đối tượng thành một chuỗi JSON: <br>
+                            <br>
+                            JSON.stringify() <br>
+                            
+                            Bạn có thể nhận văn bản thuần túy từ máy chủ và sử dụng nó như một đối tượng JavaScript. <br>
+                            
+                            Bạn có thể gửi một đối tượng JavaScript đến máy chủ ở định dạng văn bản thuần túy. <br>
+                            
+                            Bạn có thể làm việc với dữ liệu dưới dạng các đối tượng JavaScript mà không cần phân tích cú pháp và dịch phức tạp.</p>
+                    </div>
+                    
+
+                    <h2>3. XML là gì ?</h2>
+                    <p><b>XML</b> là từ viết tắt của từ Extensible Markup Language là ngôn ngữ đánh dấu mở rộng.
+                      <b>XML</b>  có chức năng truyền dữ liệu và mô tả nhiều loại dữ liệu khác nhau. 
+                         Tác dụng chính của XML là đơn giản hóa việc chia sẻ dữ liệu giữa các nền tảng và các hệ thống được kết nối thông qua mạng Internet. <br>
+                         <br>
+
+                         <b>XML</b> dùng để cấu trúc, lưu trữ và trong trao đổi dữ liệu giữa các ứng dụng và lưu trữ dữ liệu.
+                         Ví dụ khi ta xây dựng một ứng dụng bằng Php và một ứng dụng bằng Java thì hai ngôn ngữ này không thể hiểu nhau, vì vậy ta sẽ sử dụng XML để trao đổi dữ liệu.
+                          Chính vì vậy, XML có tác dụng rất lớn trong việc chia sẻ, trao đổi dữ liệu giữa các hệ thống.</p>
+                    <p> <b>Ưu và nhược điểm của XML</b> <br>
+                        <b>1. Ưu điểm của XML</b>  <br>
+                        Ưu điểm lớn nhất của XML là sự độc lập. XML được sử dụng để mô tả dữ liệu dưới dạng text, nên hầu hết các phần mềm hay các chương trình bình thường đều có thể đọc được chúng.
+                        
+                        XML có thể đọc và phân tích nguồn dữ liệu khá dễ dàng nên nó được sử dụng với mục đích chính là trao đổi dữ liệu giữa các chương trình, các hệ thống khác nhau. XML được sử dụng cho Remote Procedure Calls nhằm phục vụ cho các dịch vụ của website.
+                        <br> <br>
+                        <b>2. Nhược điểm của XML</b>  <br>
+                        Tỷ lệ sai sót khi sử dụng XML để truyền dữ liệu khoảng từ 5-7%. Con số này tuy không quá cao, nhưng trên thực tế, người ta vẫn cần cân nhắc trước khi sử dụng nó để trao đổi thông tin.</p>
+                </div>
+    </div>
+    <script language="javascript">
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("type_loop").style.display = 'block';
+            document.getElementById("type_ham").style.display = 'none';
+            document.getElementById("type_dom").style.display = 'none';
+            document.getElementById("type_json").style.display = 'none';
+            
+
+            document.getElementById("btn2").style.background = 'yellow';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            
+
+            
+
+        };
+        document.getElementById("btn3").onclick = function () {
+            document.getElementById("type_loop").style.display = 'none';
+            document.getElementById("type_ham").style.display = 'block';
+            document.getElementById("type_dom").style.display = 'none';
+            document.getElementById("type_json").style.display = 'none';
+            
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'yellow';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+
+
+        };
+        document.getElementById("btn4").onclick = function () {
+            document.getElementById("type_loop").style.display = 'none';
+            document.getElementById("type_ham").style.display = 'none';
+            document.getElementById("type_dom").style.display = 'block';
+            document.getElementById("type_json").style.display = 'none';
+            
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'yellow';
+            document.getElementById("btn5").style.background = 'white';
+
+
+        };
+        document.getElementById("btn5").onclick = function () {
+            document.getElementById("type_loop").style.display = 'none';
+            document.getElementById("type_ham").style.display = 'none';
+            document.getElementById("type_dom").style.display = 'none';
+            document.getElementById("type_json").style.display = 'block';
+            
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'yellow';
+
+
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html_css.css">
+    <style>
+        table, th, td {
+            border:1px solid black;
+          }
+    </style>
+<body>
+    
+    <div id="left"></div>
+    <!--body-->
+    <div id="mid">
+        <!--head-->
+        <div>
+            <div id="head">
+                <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 50px;">HTML</h1>
+            </div>
+            <div id="dh">
+                <ul>
+                    <li><a href="html.html">GIỚI THIỆU</a></li>
+                    <li><a style="background-color: #41737a;" href="html_the.html">VÍ DỤ</a></li>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+
+                    
+                    <li style="float: right;"><a href="js.html">JavaScript</a></li>
+                    <li style="float: right;"><a href="css.html">CSS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+        <!--ĐIỀU HƯỚNG-->
+        <div style="float: left;">
+            <input style="background-color: yellow;padding:3px;" type="button" id="btn2" value="Thẻ định dạng đoạn"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn3" value="Thẻ siêu liên kết"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn4" value="Thẻ danh sách"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn5" value="Thẻ bảng"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn6" value="Xử lý khối"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn7" value="Hình ảnh"/>
+        </div>
+        <div style="float: left;">
+            <input style="background-color: rgb(236, 235, 235);padding:3px;" type="button" id="btn8" value="Đồ họa SVG và Canvas"/>
+        </div>
+        
+        <div id="type_d" style="padding: 15px; display:block;">
+            <br>
+            <h2>Các thẻ định dạng đoạn</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p>1.&lt;p&gt;&lt;/p&gt; Thẻ này có tác dụng ngăn cách từng đoạn văn bản</p>
+                    <p> <b>VÍ DỤ:</b> &lt;p&gt; Nội dung hiển thị lên web &lt;/p&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <p>Nội dung hiển thị lên web</p>
+                    </div>
+                </div>
+                <div>
+                    <p>2.&lt;b&gt;&lt;/b&gt; Thẻ này có tác dụng viết in đậm chữ.</p>
+                    <p><b>VÍ DỤ:</b> &lt;b&gt; Nội dung hiển thị lên web &lt;/b&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <b>Nội dung hiển thị lên web</b>
+                    </div>
+                </div>
+                <div>
+                    <p>3.&lt;h1&gt;&lt;/h1&gt; Thẻ này thường được sử dụng để viết các tiêu đề vì kích cỡ lớn.</p>
+                    <p> <b>VÍ DỤ:</b> &lt;h1&gt; Nội dung hiển thị lên web &lt;/h1&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <h1>Nội dung hiển thị lên web</h1>
+                    </div>
+                </div>
+                <div>
+                    <p>4.&lt;h2&gt;&lt;/h2&gt; Thẻ này cũng giống như thẻ h1 nhưng kích cỡ nhỏ hơn.</p>
+                    <p> <b>VÍ DỤ:</b> &lt;h2&gt; Nội dung hiển thị lên web &lt;/h2&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <h2>Nội dung hiển thị lên web</h2>
+                    </div>
+                </div>
+                <div>
+                    <p>5.&lt;h3&gt;&lt;/h3&gt; Thẻ này cũng giống thẻ h1,h2 nhưng kích cỡ nhỏ hơn</p>
+                    <p> <b>VÍ DỤ:</b> &lt;h3&gt; Nội dung hiển thị lên web &lt;/h3&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <h3>Nội dung hiển thị lên web</h3>
+                    </div>
+                </div>
+                <div>
+                    <p>6.&lt;br&gt; Thẻ này có tác dụng xuống dòng trong html, thẻ br này không có thẻ đóng</p>
+                    <p> <b>VÍ DỤ:</b>MỤC LỤC &lt;br&gt; Nội dung hiển thị lên web</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <p>MUC LỤC <br> Nội dung hiển thị lên web</p>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <!---->
+        <img src="" alt="">
+        <div id="type_slk" style="padding: 15px; display:none;">
+            <h2>Các thẻ siêu liên kết</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p>1.&lt;a&gt;&lt;/a&gt; Thẻ này có tác dụng liên kết tới một link khác.</p>
+                    <p>Cấu trúc của thẻ</p>
+                    <p>&lt;a href="đường link"&gt;Tên người dùng đặt cho link&lt;/a&gt;</p>
+                    <p> <b>VÍ DỤ:</b> &lt;a href="facebook.com"&gt;Tên người dùng đặt cho link&lt;/a&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <a href="facebook.com">Tên người dùng đặt cho link</a>
+                    </div>
+                    <p>Khi người dùng click vào 'Tên người dùng đặt cho link' trang web sẽ đi tới đường dẫn 'facebook.com'.</p>
+                </div>
+                <div>
+                    <p>Ngoài ra cũng có thể sử dụng hình ảnh hay nút... để dẫn tới đường link bằng cách.</p>
+                    <p>Cấu trúc để làm điều đó</p>
+                    <p>&lt;a href="đường link"&gt; &lt;img scr="link ảnh"&gt  &lt;/a&gt;</p>
+                    <p> <b>VÍ DỤ:</b>&lt;a href="facebook.com"&gt; &lt;img scr="icface.jpg"&gt  &lt;/a&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <a href="facebook"><img style="width:10%" src="face.png" alt=""></a>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <!---->
+        <div id="type_list" style="padding: 15px; display:none;">
+            <h2>Các thẻ xử lý danh sách</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p>1. Danh sách không theo thứ tự</p>
+                    <p>Một danh sách không có thứ tự bắt đầu bằng &lt;ul&gt;thẻ. Mỗi mục danh sách bắt đầu bằng &lt;li&gt;thẻ.</p>
+                    <p> <b>VÍ DỤ:</b><br> &lt;ul&gt;<br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;   &lt;li&gt;Cafe &lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;   &lt;li&gt;Nước ngọt &lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;   &lt;li&gt;Bánh &lt;/li&gt;<br>
+                    &lt;/ul&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <img width="15%" src="Untitled.jpg" alt="">
+                    </div>
+                </div>
+                <div>
+                    <p>2. Danh sách có thứ tự</p>
+                    <p>Một danh sách có thứ tự bắt đầu bằng &lt;ol&gt;thẻ. Mỗi mục danh sách bắt đầu bằng &lt;li&gt;thẻ.</p>
+                    <p> <b>VÍ DỤ:</b><br> &lt;ol&gt;<br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;   &lt;li&gt;Cafe &lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;   &lt;li&gt;Nước ngọt &lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;   &lt;li&gt;Bánh &lt;/li&gt;<br>
+                    &lt;/ol&gt;</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <img width="15%" src="cott.jpg" alt="">
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <!---->
+        <div id="type_table" style="padding: 15px; display:none;">
+            <h2>Các thẻ xử lý bảng</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <p>Bảng HTML cho phép các nhà phát triển web sắp xếp dữ liệu thành các hàng và cột.</p>
+                    <p>1.&lt;table&gt;&lt;/table&gt; Thẻ này xác định một bảng, một bảng trong HTML bao gồm các ô bảng bên trong các hàng và cột </p>
+                    <p> <p style="font-weight: bold;">VÍ DỤ:</p> 
+                        &lt;table&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;STT&lt;/th&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;TÊN&lt;/th&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;LỚP&lt;/th&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;1&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Đỗ Văn A&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;18&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;2&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Đỗ Văn C&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;20&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &lt;/table&gt;
+                    </p> 
+                    <p>
+                        
+                        <p style="font-style: italic;">&lt;!--Xử dụng thêm css để tạo đường viền cho bảng--&gt;</p>
+                        &lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;table, th, td {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid black;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                        &lt;/style&gt;
+                       
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ sẽ tạo ra 1 bảng có 3 hàng và 3 cột--&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:100px ;background-color:rgb(255, 251, 251)">
+                        <table style="border: 1px black;">
+                            <tr>
+                               <th>STT</th>
+                                <th>TÊN</th>
+                                <th>LỚP</th>
+                           </tr>
+                           <tr>
+                                <td>1</td>
+                                <td>Đỗ Văn A</td>
+                               <td>18</td>
+                           </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Đỗ Văn C</td>
+                                <td>20</td>
+                           </tr>
+                       </table>
+                    </div>
+                </div>
+
+                <div>
+                    <p>2.&lt;td&gt;&lt;/td&gt; Thẻ này dùng để xác định 1 ô trong table.</p>
+                    <p> <p style="font-weight: bold;">VÍ DỤ:</p> 
+                        &lt;table&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Ô 1;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Ô 2;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Ô 3;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &lt;/table&gt;
+                    </p> 
+                    <p>
+                        <p style="font-style: italic;">&lt;!--Xử dụng thêm css để tạo đường viền cho bảng--&gt;</p>
+                        &lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;table, th, td {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid black;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                        &lt;/style&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ sẽ tạo ra 1 bảng gồm 1 hàng, 3 ô--&gt;</p>
+                    <p>KẾT QUẢ</p>
+
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <table>
+                            <tr>
+                                <td>Ô 1</td>
+                                <td>Ô 2</td>
+                                <td>Ô 3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <p>3.&lttr&gt;&lt;/tr&gt; Thẻ này tạo hàng trong bảng.</p>
+                    <p> <p style="font-weight: bold;">VÍ DỤ:</p> 
+                        &lt;table&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Hàng 1&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Hàng 1&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Hàng 1&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Hàng 2&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Hàng 2&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Hàng 2&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &lt;/table&gt;
+                    </p> 
+                    <p>
+                        <p style="font-style: italic;">&lt;!--Xử dụng thêm css để tạo đường viền cho bảng--&gt;</p>
+                        &lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;table, th, td {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid black;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                        &lt;/style&gt;
+                       
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ sẽ tạo ra 2 hàng, mỗi hàng 3 ô--&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <table>
+                            <tr>
+                              <td>Hàng 1</td>
+                              <td>Hàng 1</td>
+                              <td>Hàng 1</td>
+                            </tr>
+                            <tr>
+                              <td>Hàng 2</td>
+                              <td>Hàng 2</td>
+                              <td>Hàng 2</td>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+                <div>
+                    <p>4.&lt;th&gt;&lt;/th&gt; Nếu bạn muốn tạo tiêu đề cho bảng thì ta nên sử dụng thẻ &lt;th&gt; thay vì thẻ &lt;td&gt;</p>
+                    <p> <p style="font-weight: bold;">VÍ DỤ:</p> 
+                        &lt;table&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;STT&lt;/th&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;TÊN&lt;/th&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;LỚP&lt;/th&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;1&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Đỗ Văn A&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;18&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;2&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Đỗ Văn C&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;20&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &lt;/table&gt;
+                    </p> 
+                    <p>
+                        
+                        <p style="font-style: italic;">&lt;!--Xử dụng thêm css để tạo đường viền cho bảng--&gt;</p>
+                        &lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;table, th, td {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid black;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                        &lt;/style&gt;
+                       
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ sẽ tạo ra 1 bảng có 3 hàng và 3 cột, nhưng ở hàng đầu tiên ta dùng thẻ &lt;th&gt; nên hàng đầu sẽ có những đặc điểm của tiêu đề.--&gt;</p>
+                    <p>KẾT QUẢ</p> 
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:100px ;background-color:rgb(255, 251, 251)">
+                        <table>
+                            <tr>
+                              <th>STT</th>
+                              <th>TÊN</th>
+                              <th>TUỔI</th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>ĐỖ VĂN A</td>
+                              <td>20</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>ĐỖ VĂN B</td>
+                              <td>18</td>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+
+            </div>     
+        </div>
+        <!---->
+        <div id="type_div" style="padding: 15px; display:none;">
+            <h2>Các thẻ xử lý khối</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <h2>Phần tử cấp khối</h2>
+                       <p>Một phần tử cấp khối luôn bắt đầu trên một dòng mới. <br>
+                        Một phần tử cấp khối luôn chiếm toàn bộ chiều rộng có sẵn (trải dài sang trái và phải hết mức có thể). <br>
+                        Phần tử cấp khối có lề trên và lề dưới, trong khi phần tử nội tuyến thì không.</p>
+                </div>
+
+
+                <div>
+                    <p>Các thẻ cấp khối trong html</p>
+                    <div style="width:100% ; box-shadow:3px 3px 3px grey; padding:5px; height:150px ;background-color:rgb(255, 251, 251)">
+                        <table>
+                            <tr>
+                                <td>&lt;address&gt;</td>
+                                <td>&lt;article&gt;</td>
+                                <td>&lt;aside&gt;</td>
+                                <td>&lt;blockquote&gt;</td>
+                                <td>&lt;canvas&gt;</td>
+                                <td>&lt;dd&gt;</td>
+                                <td>&lt;div&gt;</td>
+                                <td>&lt;dl&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;dt&gt;</td>
+                                <td>&lt;fieldset&gt;</td>
+                                <td>&lt;figcaption&gt;</td>
+                                <td>&lt;figure&gt;</td>
+                                <td>&lt;footer&gt;</td>
+                                <td>&lt;form&gt;</td>
+                                <td>&lt;h1&gt;-&lt;h6&gt;</td>
+                                <td>&lt;header&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;hr&gt;</td>
+                                <td>&lt;li&gt;</td>
+                                <td>&lt;main&gt;</td>
+                                <td>&lt;nav&gt;</td>
+                                <td>&lt;noscript&gt;</td>
+                                <td>&lt;ol&gt;</td>
+                                <td>&lt;p&gt;</td>
+                                <td>&lt;pre&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;section&gt;</td>
+                                <td>&lt;table&gt;</td>
+                                <td>&lt;tfoot&gt;</td>
+                                <td>&lt;ul&gt;</td>
+                                <td>&lt;video&gt;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <p>Ở đây ta sẽ lấy 2 ví dụ thôi nhé, còn lại các bạn tự thử nha.</p>
+                    <p>1.Phần tử &lt;div&gt;.</p>
+                    <p>Phần tử &lt;div&gt; thường được sử dụng làm vùng chứa cho các phần tử HTML khác.
+
+                        Phần tử &lt;div&gt; không có thuộc tính bắt buộc, nhưng style, class và id là thông dụng.
+                        
+                        Khi được sử dụng cùng với CSS, &lt;div&gt; phần tử có thể được sử dụng để tạo kiểu cho các khối nội dung:</p>
+                    <p> VÍ DỤ: <br>
+                        &lt;div style="background-color:black;color:white;padding:20px;"&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Tiêu đề&lt/h2&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Tôi yêu HTML&lt;/p&gt; <br>
+                        &lt;/div&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ này tạo ra 1 vùng có các css.--&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:80% ; box-shadow:3px 3px 3px grey; padding:5px; height:200px ;background-color:rgb(255, 251, 251)">
+                        <div style="background-color:black;color:white;padding:20px;">
+                            <h2>Tiêu đề</h2>
+                            <p>Tôi yêu HTML</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>2.Phần tử &lt;span&gt;.</p>
+                    <p>Phần &lt;span&gt;tử là một vùng chứa nội tuyến được sử dụng để đánh dấu một phần của văn bản hoặc một phần của tài liệu.
+
+                        Phần &lt;span&gt;tử không có thuộc tính bắt buộc, nhưng style, class và id là thông dụng.
+                        
+                        Khi được sử dụng cùng với CSS, &lt;span&gt;phần tử có thể được sử dụng để tạo kiểu cho các phần của văn bản:</p>
+                    
+                        <p> VÍ DỤ: <br>
+                            &lt;p&gt;Con mèo của tôi có đôi mắt mầu <br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span style="background-color:grey;color:blue;font-weight:bold"&gt; 
+                            xanh &lt;/span&gt; và con chó của tôi màu  <br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span style="background-color: gray; color:black;font-weight:bold"&gt;
+                            đen&lt;/span&gt; <br>
+                            &lt;/p&gt;
+                        </p>
+
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:70px ;background-color:rgb(255, 251, 251)">
+                        <p>Con mèo của tôi có đôi mắt đầu <span style="background-color: gray; color:black;font-weight:bold">xanh</span> và con chó của tôi mầu 
+                        <span style="background-color: gray; color:black;font-weight:bold">đen</span></p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <!---->
+        <div id="type_img" style="padding: 15px; display:none;">
+            <h2>Các thẻ xử lý hình ảnh</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <h2>Cú pháp hình ảnh HTML</h2>
+                    <p>Thẻ &lt;img&gt; HTML được sử dụng để nhúng một hình ảnh vào một trang web.
+
+                    Hình ảnh không được chèn vào một trang web về mặt kỹ thuật; hình ảnh được liên kết với các trang web. Các thẻ &lt;img&gt; tạo ra một không gian nắm giữ cho hình ảnh tham chiếu.
+
+                    Các thẻ &lt;img&gt; trống, nó chỉ chứa các thuộc tính, và không có một thẻ đóng.
+
+                    Các thẻ &lt;img&gt; có hai thuộc tính cần thiết:
+                    <br>
+                    src - Chỉ định đường dẫn đến hình ảnh
+                    <br>
+                    alt - Chỉ định một văn bản thay thế cho hình ảnh</p>
+                    <p> Cấu trúc của thẻ &lt;img&gt;</p>
+                    <p>&lt;img src="đường link ảnh" alt="note khi không có ảnh"&gt;</p>
+
+                    <p> VÍ DỤ: <br>
+                        1. &lt;img src="/BLT_HTML/anh/face.png" alt="ảnh facebook"&gt;<br>
+                        <p style="font-style: italic;">&lt;!--Ví dụ này tạo ra ảnh lấy từ link"/BLT_HTML/anh/face.png" --&gt;</p>
+                        <p>2. &lt;img src="" alt="ảnh facebook"&gt;</p> 
+                        <p style="font-style: italic;">&lt;!--Ví dụ này ở đường link để rỗng lúc này note sẽ xuất hiện--&gt;</p>
+                    </p>
+
+                 
+                   <p>KẾT QUẢ</p>
+
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:250px ;background-color:rgb(255, 251, 251)">
+                        <img style="width:20%" src="face.png" alt="">
+                        <p>nếu không có ảnh thì sẽ note alt ra màn hình</p>
+                        <img style="width:20%"src="" alt="ảnh facebook">
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <!---->
+        <div id="type_svg" style="padding: 15px; display:none;">
+            <h2>Các thẻ đồ họa SVG và Canvas</h2>
+            <div style="width: 80%; background-color: rgb(221, 221, 221); padding:10px ; box-shadow: 3px 3px 5px grey; ">
+                <div>
+                    <h2>SVG là gì?</h2>
+                    <p>SVG là viết tắt của Scalable Vector Graphics</p>
+                    <p>SVG được sử dụng để xác định đồ họa cho Web</p>
+                    <p>SVG là một khuyến nghị của W3C</p>
+
+                    <h2>Phần tử HTML &lt;svg&gt; </h2>
+                    <p>Phần tử  &lt;svg&gt; HTML là vùng chứa đồ họa SVG <br>
+                        SVG có một số phương pháp để vẽ đường dẫn, hộp, hình tròn, văn bản và hình ảnh đồ họa.</p></p> 
+                        
+
+
+                    <p>1. Vẽ hình tròn bằng SVG</p>
+                    <p>VÍ DỤ: <br>
+                        &lt;svg width="100" height="100"&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp&lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt; <br>
+                        &lt;/svg&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ này sẽ tạo ra 1 vùng svg có dài=100px, rộng=100px <br>
+                        và vẽ ra hình tròn có cy , cx , r là tọa độ của hình tròn,  viền mầu xanh độ dày 4px và bên trong màu vàng ,--&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:150px ;background-color:rgb(255, 251, 251)">
+                        <svg width="100" height="100">
+                            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                          </svg>
+                    </div>
+                </div>
+
+                <div>
+                    <p>2. Vẽ hình chữ nhật bằng SVG</p>
+                    <p>VÍ DỤ: <br>
+                        &lt;svg width="400" height="100"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp&lt;rect width="300" height="70" style="fill:grey;stroke-width:10;stroke:rgb(0,0,0)" /&gt;<br>
+                        &lt;/svg&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!--Ví dụ này sẽ tạo ra 1 vùng svg có dài=400px, rộng=100px <br>
+                        và vẽ ra hình chữ nhật có chiều dài 300, rộng 70 mầu xám và viền mầu đen rộng 10px --&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:150px ;background-color:rgb(255, 251, 251)">
+                        <svg width="400" height="100">
+                            <rect width="300" height="100" style="fill:grey;stroke-width:8px;stroke:rgb(0,0,0)" />
+                          </svg>
+                    </div>
+                </div>
+                <p>Ngoài ra bạn còn có thể vẽ ra nhiều thứ từ SVG  bạn có thể tham khảo tại : <a href="https://www.w3schools.com/html/html5_svg.asp">W3schools</a>
+                 
+                    
+
+    
+
+
+
+                    <h2>HTML Canvas là gì?</h2>
+                    <p>Phần tử &lt;canvas&gt; HTML được sử dụng để vẽ đồ họa một cách nhanh chóng, thông qua JavaScript.</p>
+                    <p>Phần tử &lt;canvas&gt; chỉ là một vùng chứa cho đồ họa. Bạn phải sử dụng JavaScript để thực sự vẽ đồ họa.</p>
+                    <p>Canvas có một số phương pháp để vẽ đường dẫn, hộp, hình tròn, văn bản và thêm hình ảnh.</p>
+
+                    <p>Canvas là một vùng hình chữ nhật trên trang HTML. Theo mặc định, canvas không có đường viền và không có nội dung.
+                        Bạn có thể thêm đường viền bằng cách thêm thuộc tính style </p>
+                    <b>VÍ DỤ:</b><br>
+                    <p>&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;
+                        &lt;/canvas&gt;</p>
+                    <p>KẾT QUẢ</p>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:150px ;background-color:rgb(255, 251, 251)">
+                        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                        </canvas>
+                    </div>
+
+                    <p>Lấy thêm 1 ví dụ.</p>
+                    <p>Lần này ta sẽ vẽ vào trong <b>canvas</b></p>
+                    <p>Để vẽ được vào canvas ta cần tạo 1 javascript bằng cách xem ví dụ dưới đây nhé.</p>
+                    <b>VÍ DỤ:</b> <br>
+                    <p>
+                        &lt;script&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp    var c = document.getElementById("mycanvas");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp    var ctx = c.getContext("2d");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp   ctx.font = "30px Arial";<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp    ctx.fillText("Hello World", 10, 50);<br>
+                        &lt;/script&gt;
+                    </p>
+                    <p style="font-style: italic;">&lt;!-Ta sẽ tạo ra 1 dòng chữ Hello World ở bên trong vùng canvas có id là "mycanvas".<br>
+                    <b>KẾT QUẢ</b>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px; height:150px ;background-color:rgb(255, 251, 251)">
+                        <canvas id="mycanvas" width="200" height="100" style="border:1px solid #000000;">
+                        </canvas>
+                        <script>
+                            var c = document.getElementById("mycanvas");
+                            var ctx = c.getContext("2d");
+                            ctx.font = "30px Arial";
+                            ctx.strokeText("Hello World", 10, 50);
+                        </script>
+                    </div>
+                    <p>Bạn cũng có thể xem thêm các ví dụ tại trang web: <a href="https://www.w3schools.com/html/html5_canvas.asp">w3schools.com</a> </p>
+
+
+                    
+                    
+
+                <br>
+                <h2>Chúng ta sẽ cùng so sánh MỘT chút giữa SVG và Canvas nhé</h2>
+             
+                    <h2>Sự khác biệt giữa SVG và Canvas</h2>
+                    <div style="width:70% ; box-shadow:3px 3px 3px grey; padding:5px ;background-color:rgb(255, 251, 251)">
+                        <p>SVG là một ngôn ngữ để mô tả đồ họa 2D trong XML.</p>
+                        <p>Canvas vẽ đồ họa 2D một cách nhanh chóng (với JavaScript).</p>
+                        <p>SVG dựa trên XML, có nghĩa là mọi phần tử đều có sẵn trong SVG DOM. Bạn có thể đính kèm các trình xử lý sự kiện JavaScript cho một phần tử.</p>
+                        <p>Trong SVG, mỗi hình dạng được vẽ được ghi nhớ như một đối tượng. Nếu các thuộc tính của đối tượng SVG bị thay đổi, trình duyệt có thể tự động hiển thị lại hình dạng.</p>
+                        <p>Canvas được kết xuất từng pixel một. Trong canvas, một khi đồ họa được vẽ, nó sẽ bị trình duyệt quên. Nếu vị trí của nó phải được thay đổi, toàn bộ cảnh cần được vẽ lại, bao gồm bất kỳ đối tượng nào có thể đã bị che bởi đồ họa.</p>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div id="right"></div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--JavaS-->
+
+    <script language="javascript">
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("type_d").style.display = 'block';
+            document.getElementById("type_slk").style.display = 'none';
+            document.getElementById("type_list").style.display = 'none';
+            document.getElementById("type_table").style.display = 'none';
+            document.getElementById("type_div").style.display = 'none';
+            document.getElementById("type_img").style.display = 'none';
+            document.getElementById("type_svg").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'yellow';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+            document.getElementById("btn8").style.background = 'white';
+            
+
+        };
+        document.getElementById("btn3").onclick = function () {
+            document.getElementById("type_d").style.display = 'none';
+            document.getElementById("type_slk").style.display = 'block';
+            document.getElementById("type_list").style.display = 'none';
+            document.getElementById("type_table").style.display = 'none';
+            document.getElementById("type_div").style.display = 'none';
+            document.getElementById("type_img").style.display = 'none';
+            document.getElementById("type_svg").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'yellow';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+            document.getElementById("btn8").style.background = 'white';
+
+        };
+        document.getElementById("btn4").onclick = function () {
+            document.getElementById("type_d").style.display = 'none';
+            document.getElementById("type_slk").style.display = 'none';
+            document.getElementById("type_list").style.display = 'block';
+            document.getElementById("type_table").style.display = 'none';
+            document.getElementById("type_div").style.display = 'none';
+            document.getElementById("type_img").style.display = 'none';
+            document.getElementById("type_svg").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'yellow';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+            document.getElementById("btn8").style.background = 'white';
+
+        };
+        document.getElementById("btn5").onclick = function () {
+            document.getElementById("type_d").style.display = 'none';
+            document.getElementById("type_slk").style.display = 'none';
+            document.getElementById("type_list").style.display = 'none';
+            document.getElementById("type_table").style.display = 'block';
+            document.getElementById("type_div").style.display = 'none';
+            document.getElementById("type_img").style.display = 'none';
+            document.getElementById("type_svg").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'yellow';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+            document.getElementById("btn8").style.background = 'white';
+
+        };
+        document.getElementById("btn6").onclick = function () {
+            document.getElementById("type_d").style.display = 'none';
+            document.getElementById("type_slk").style.display = 'none';
+            document.getElementById("type_list").style.display = 'none';
+            document.getElementById("type_table").style.display = 'none';
+            document.getElementById("type_div").style.display = 'block';
+            document.getElementById("type_img").style.display = 'none';
+            document.getElementById("type_svg").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'yellow';
+            document.getElementById("btn7").style.background = 'white';
+            document.getElementById("btn8").style.background = 'white';
+
+        };
+        document.getElementById("btn7").onclick = function () {
+            document.getElementById("type_d").style.display = 'none';
+            document.getElementById("type_slk").style.display = 'none';
+            document.getElementById("type_list").style.display = 'none';
+            document.getElementById("type_table").style.display = 'none';
+            document.getElementById("type_div").style.display = 'none';
+            document.getElementById("type_img").style.display = 'block';
+            document.getElementById("type_svg").style.display = 'none';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'yellow';
+            document.getElementById("btn8").style.background = 'white';
+
+        };
+        document.getElementById("btn8").onclick = function () {
+            document.getElementById("type_d").style.display = 'none';
+            document.getElementById("type_slk").style.display = 'none';
+            document.getElementById("type_list").style.display = 'none';
+            document.getElementById("type_table").style.display = 'none';
+            document.getElementById("type_div").style.display = 'none';
+            document.getElementById("type_img").style.display = 'none';
+            document.getElementById("type_svg").style.display = 'block';
+
+            document.getElementById("btn2").style.background = 'white';
+            document.getElementById("btn3").style.background = 'white';
+            document.getElementById("btn4").style.background = 'white';
+            document.getElementById("btn5").style.background = 'white';
+            document.getElementById("btn6").style.background = 'white';
+            document.getElementById("btn7").style.background = 'white';
+            document.getElementById("btn8").style.background = 'yellow';
+
+        };
+
+
+    </script>
+   
+
+</body>
+</html>

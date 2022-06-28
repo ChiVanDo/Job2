@@ -1,0 +1,92 @@
+body {
+    margin: 0 auto;
+    background-image: url(hinh-nen-trang-hoa-dep_104327165.gif);
+}
+  
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+  
+li{
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #67868b;
+    color: black;
+}
+
+btn2:hover{
+    background-color: #67868b;
+    color: black;
+}
+
+
+#head{
+  
+    background-color: #814646; 
+    padding: 20px;
+    text-align: center;
+}
+#dh{
+    padding: 1px;
+    background-color: #814646;
+}
+#left{
+    background-color: rgb(253, 255, 255);
+    width:10%;
+    padding: 1px;
+    float: left;
+}
+#mid{
+    background-color: rgb(246, 252, 252);
+    width:80%;
+    padding: 1px;
+    float: left;
+}
+#right{
+    background-color: rgb(255, 255, 255);
+    width:10%;
+    padding: 1px;
+    float: left;
+}
+p{
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+
+}
+/* tự động đổi mầu head css.html */
+.css-hd{
+    animation: colorText 0.5s infinite;
+    -webkit-animation: colorText 5s infinite;
+    -moz-animation: colorText 5s infinite;
+    -o-animation: colorText 0.5s infinite
+    }
+    @keyframes colorText {
+    0% {
+    text-color: yellowgreen;
+    color: white;
+    }
+    50% {
+    text-color: red;
+    color: yellow;
+    }
+}

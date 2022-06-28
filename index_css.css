@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {
+  margin: 0 auto;
+  background-image: url(hinh-nen-trang-hoa-dep_104327165.gif);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#head1 {
+  background-color: #aca9a9;
+  color: black;
+  text-align: center;
+}
+
+#gt {
+  background-color: #aca9a9;
+  color: black;
+}
+
+#mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Canh giữa bằng flex */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+p {
+  color: black;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#img1 {
+  border-radius: 150px;
+  width: 100%;
+  border: 3px solid #c5c1c1;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 70px;
+  text-shadow: 2px 3px 5px #a7a7a7;
+  color: #0f0707;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  background-color: #814646;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #41737a;
+  color: black;
+}
+
+#logo {
+  background-color: white;
+  height: 70px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 5px gray;
+          box-shadow: 3px 3px 5px gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#logo_con {
+  margin: auto;
+}
+
+#left {
+  width: 20%;
+  height: 770px;
+  background-color: #814646;
+  padding: 10px;
+  float: left;
+}
+
+.html1 {
+  width: 80%;
+  background-color: blueviolet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#html2 {
+  text-align: center;
+  margin: auto;
+}
+/*# sourceMappingURL=btl.css.map */
